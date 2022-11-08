@@ -1,11 +1,25 @@
-a{
+a {
     text-decoration: none;
 }
 
-.navigation{
-    &__body{
-        NavLink,a{
-            color:#fff;
+.navigation {
+    &__body {
+        a {
+            display: flex;
+            width: 8vw;
+            text-align: center;
+            justify-content: center;
+            height: 2.4vw;
+            align-items: center;
+            display: flex;
+            text-transform: capitalize;
+            color: #fff;
+        }
+
+
+        a.is-active {
+            color: #161616;
+            background-color: #fff;
         }
     }
 }
