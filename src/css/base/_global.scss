@@ -1,12 +1,39 @@
 // reset du css
 
-*,html,body{
+*,
+html,
+body {
     box-sizing: border-box;
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
 }
 
-a,p,span,ul,li,table,tr,td{
+a,
+p,
+span,
+ul,
+li,
+table,
+tr,
+td {
     font-family: $font-primary;
+}
+
+#root {
+    padding: 2vw;
+    overflow-y: hidden;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    &:hover {
+        border-color: $primary;
+    }
+}
+
+main {
+    height: 100%;
+    background-color: $primary;
 }

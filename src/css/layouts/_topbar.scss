@@ -1,0 +1,9 @@
+.navigation {
+    &__header {
+        background-color: $secondary;
+        display: flex;
+        height: 2vw;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}

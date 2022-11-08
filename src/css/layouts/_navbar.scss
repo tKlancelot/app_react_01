@@ -1,0 +1,22 @@
+.navigation {
+    &__body {
+        background-color: #161616;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logotype {
+            display: flex;
+            svg{
+                margin: 1rem;
+                height: 3.2vw;
+                width: 100%;
+
+            }
+        }
+
+        ul {
+            display: flex;
+        }
+    }
+}

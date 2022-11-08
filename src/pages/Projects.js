@@ -1,15 +1,15 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 
-const Home = () => {
+const Projects = () => {
   return (
     <React.Fragment>
       <Navigation />
       <main>
-        <h1>Accueil</h1>
+        <h1>Page projets</h1>
       </main>
     </React.Fragment>
   );
 };
 
-export default Home;
+export default Projects;

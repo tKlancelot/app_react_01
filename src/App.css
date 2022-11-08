@@ -8,15 +8,41 @@
   src: url("/src/assets/fonts/Inter/static/Inter-Regular.ttf") format("truetype");
   font-display: swap;
 }
-*, html, body {
+*,
+html,
+body {
   box-sizing: border-box;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
 
-a, p, span, ul, li, table, tr, td {
+a,
+p,
+span,
+ul,
+li,
+table,
+tr,
+td {
   font-family: "Inter Regular";
+}
+
+#root {
+  padding: 2vw;
+  overflow-y: hidden;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+#root:hover {
+  border-color: #f6f6f6;
+}
+
+main {
+  height: 100%;
+  background-color: #f6f6f6;
 }
 
 a {
@@ -42,6 +68,7 @@ a {
 ul,
 ul li {
   list-style-type: none;
+  font-size: 0.88vw;
 }
 
 h1 {
@@ -51,6 +78,27 @@ h1 {
 .navigation__body {
   background-color: #161616;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation__body .logotype {
+  display: flex;
+}
+.navigation__body .logotype svg {
+  margin: 1rem;
+  height: 3.2vw;
+  width: 100%;
+}
+.navigation__body ul {
+  display: flex;
+}
+
+.navigation__header {
+  background-color: #CDFC8E;
+  display: flex;
+  height: 2vw;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 /*# sourceMappingURL=App.css.map */
