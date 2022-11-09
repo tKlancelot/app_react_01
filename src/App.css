@@ -8,6 +8,11 @@
   src: url("/src/assets/fonts/Inter/static/Inter-Regular.ttf") format("truetype");
   font-display: swap;
 }
+@font-face {
+  font-family: "Inter Light";
+  src: url("/src/assets/fonts/Inter/static/Inter-Light.ttf") format("truetype");
+  font-display: swap;
+}
 *,
 html,
 body {
@@ -28,15 +33,14 @@ td {
   font-family: "Inter Regular";
 }
 
-#root {
-  padding: 2vw;
+.body {
   overflow-y: hidden;
   min-height: 100vh;
   max-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
 }
-#root:hover {
+.body:hover {
   border-color: #f6f6f6;
 }
 
@@ -59,10 +63,14 @@ a {
   display: flex;
   text-transform: capitalize;
   color: #fff;
+  border-radius: 4px;
 }
 .navigation__body a.is-active {
-  color: #161616;
-  background-color: #fff;
+  background: linear-gradient(180deg, #33156b, #161616);
+  box-shadow: 1px 1px 0px inset rgba(255, 255, 255, 0.2666666667), -1px -1px 0px inset rgba(255, 255, 255, 0.1333333333), -4px -1px 1px #161616, 4px 1px 1px #161616;
+}
+.navigation__body a.is-active:hover {
+  background-color: #401c83;
 }
 
 ul,
@@ -73,10 +81,66 @@ ul li {
 
 h1 {
   font-family: "Oswald Medium";
+  font-size: 4.8vw;
+  text-align: center;
+  text-shadow: -1px -1px 0px rgba(216, 216, 216, 0.6431372549), 1px 1px #161616, 0px -1px #f6f6f6;
+  letter-spacing: 0.048rem;
+  text-transform: uppercase;
+}
+
+.home-banner h1 {
+  position: relative;
+  top: -5%;
+  color: #33156b;
+  z-index: 2;
+}
+
+.square-frame {
+  border: 1px solid rgba(216, 216, 216, 0.2509803922);
+  border-bottom: unset;
+  box-shadow: 1px 1px 1px 0px rgba(216, 216, 216, 0.031372549) inset, -2px -2px 2px 0px rgba(216, 216, 216, 0.031372549) inset;
+  background-color: rgba(216, 216, 216, 0.031372549);
+  position: absolute;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+button {
+  cursor: pointer;
+  font-size: 0.78vw;
+}
+
+.home-banner button {
+  border-radius: 32px;
+  background: unset;
+  background: rgba(35, 8, 85, 0.2823529412);
+  border: 1px solid rgba(55, 21, 117, 0.4470588235);
+  outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
+  padding: 1.2rem;
+  width: 7.2vw;
+  color: #969696;
+  text-transform: capitalize;
+}
+
+.footer__body {
+  border-bottom: 1px solid #2a2a2a;
+  border-top: 1px solid #2a2a2a;
+  background: linear-gradient(90deg, #161616, #202020, #161616);
+  display: flex;
+  align-items: center;
+  height: 2.8vw;
+  justify-content: center;
+}
+.footer__body p {
+  font-family: "Inter Light";
+  font-size: 0.64vw;
+  color: #969696;
 }
 
 .navigation__body {
-  background-color: #161616;
+  border-bottom: 1px solid #2a2a2a;
+  border-top: 1px solid #2a2a2a;
+  background: linear-gradient(90deg, #161616, #202020, #161616);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,11 +158,68 @@ h1 {
 }
 
 .navigation__header {
-  background-color: #CDFC8E;
+  background-color: #161616;
   display: flex;
   height: 2vw;
   justify-content: flex-end;
   align-items: center;
+  color: #f6f6f6;
+}
+.navigation__header .social-media {
+  display: flex;
+  align-items: center;
+}
+.navigation__header .social-media svg {
+  fill: #969696;
+  width: 0.92vw;
+  height: 0.92vw;
+  margin: auto 1rem;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+.navigation__header .social-media svg:hover {
+  fill: #f6f6f6;
+}
+
+.home-banner {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.home-banner__body {
+  background: linear-gradient(180deg, #0e0324, #130430);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.home-banner__header {
+  width: 64vw;
+  height: 64vw;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  top: -40%;
+  left: -16%;
+  background: rgba(35, 8, 85, 0.2823529412);
+  border: 1px solid rgba(55, 21, 117, 0.4470588235);
+  outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
+}
+.home-banner__footer {
+  width: 44vw;
+  height: 44vw;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  bottom: -30%;
+  right: -16%;
+  background: rgba(35, 8, 85, 0.2823529412);
+  border: 1px solid rgba(55, 21, 117, 0.4470588235);
+  outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -14,12 +14,16 @@ a {
             display: flex;
             text-transform: capitalize;
             color: #fff;
+            border-radius: 4px; 
         }
 
 
         a.is-active {
-            color: #161616;
-            background-color: #fff;
+            background:linear-gradient(180deg,#33156b,$write);
+            box-shadow: 1px 1px 0px inset #fff4,-1px -1px 0px inset #fff2,-4px -1px 1px $write,4px 1px 1px $write;
+            &:hover{
+                background-color: #401c83;
+            }
         }
     }
 }

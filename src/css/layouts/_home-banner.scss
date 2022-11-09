@@ -1,0 +1,38 @@
+.home-banner{
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &__body{
+        background:linear-gradient(180deg,#0e0324,#130430);
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__header{
+        width: 64vw;
+        height: 64vw;
+        position: absolute;
+        border-radius: 50%;
+        z-index: 1;
+        top: -40%;
+        left: -16%;
+        @include simple-shadow;
+        // outline-offset: 0vw;
+    }
+    &__footer{
+        width: 44vw;
+        height: 44vw;
+        position: absolute;
+        border-radius: 50%;
+        z-index: 1;
+        bottom: -30%;
+        right: -16%;
+        @include simple-shadow;
+    }
+}

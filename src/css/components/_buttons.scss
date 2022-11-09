@@ -1,0 +1,16 @@
+button{
+    cursor: pointer;
+    font-size: 0.78vw;
+}
+
+.home-banner {
+    button {
+        border-radius: 32px;
+        background: unset;
+        @include simple-shadow;
+        padding: 1.2rem;
+        width: 7.2vw;
+        color: $primary-light;
+        text-transform: capitalize;
+    }
+}

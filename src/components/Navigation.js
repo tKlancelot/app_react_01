@@ -1,9 +1,12 @@
-import React from "react";
+import {React} from 'react';
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import Topbar from "./Topbar";
 
 const Navigation = () => {
+
+
+
   return (
     <div className="navigation">
       <div className="navigation__header">
@@ -19,22 +22,22 @@ const Navigation = () => {
             <li>accueil</li>
           </NavLink>
           <NavLink
-            to="/about"
-            className={(nav) => (nav.isActive ? "is-active" : "")}
-          >
-            <li>about</li>
-          </NavLink>
-          <NavLink
             to="/projects"
             className={(nav) => (nav.isActive ? "is-active" : "")}
           >
-            <li>projects</li>
+            <li>projets</li>
           </NavLink>
           <NavLink
             to="/booklet"
             className={(nav) => (nav.isActive ? "is-active" : "")}
           >
-            <li>booklet</li>
+            <li>livret</li>
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={(nav) => (nav.isActive ? "is-active" : "")}
+          >
+            <li>à propos</li>
           </NavLink>
         </ul>
       </div>

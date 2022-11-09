@@ -1,3 +1,18 @@
 h1{
-    font-family: 'Oswald Medium';
+    font-family: $font-secondary;
+    font-size: 4.8vw;
+    text-align: center;
+    text-shadow:-1px -1px 0px #d8d8d8a4, 1px 1px $write,0px -1px $primary;
+    letter-spacing: 0.048rem;
+    text-transform: uppercase;
+}
+
+
+.home-banner{
+    h1{
+        position: relative;
+        top:-5%;
+        color: #33156b;
+        z-index: 2;
+    }
 }

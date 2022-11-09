@@ -1,6 +1,7 @@
 .navigation {
     &__body {
-        background-color: #161616;
+        @include section-border;
+        @include section-linear;
         display: flex;
         justify-content: space-between;
         align-items: center;

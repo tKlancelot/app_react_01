@@ -14,12 +14,14 @@
 @import 'components/links';
 @import 'components/list-items';
 @import 'components/headings';
-// @import 'components/buttons';
+@import 'components/square';
+@import 'components/buttons';   
 // @import 'components/paragraphs';
 
 //layouts
 
 // @import 'layouts/header';
-// @import 'layouts/footer';
+@import 'layouts/footer';
 @import 'layouts/navbar';
 @import 'layouts/topbar';
+@import 'layouts/home-banner';
