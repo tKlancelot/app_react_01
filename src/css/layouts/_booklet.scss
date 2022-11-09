@@ -1,0 +1,12 @@
+.booklet {
+    @include background-linear;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &__body {
+        @include background-linear;
+        width: 100%;
+    }
+}

@@ -5,25 +5,18 @@ a {
 .navigation {
     &__body {
         a {
-            display: flex;
-            width: 8vw;
+            @include flex-center-center;
             text-align: center;
-            justify-content: center;
+            width: 8vw;
             height: 2.4vw;
-            align-items: center;
-            display: flex;
             text-transform: capitalize;
-            color: #fff;
+            color: $primary;
             border-radius: 4px; 
         }
 
-
         a.is-active {
-            background:linear-gradient(180deg,#33156b,$write);
+            background:linear-gradient(180deg,$secondary,$write);
             box-shadow: 1px 1px 0px inset #fff4,-1px -1px 0px inset #fff2,-4px -1px 1px $write,4px 1px 1px $write;
-            &:hover{
-                background-color: #401c83;
-            }
         }
     }
 }

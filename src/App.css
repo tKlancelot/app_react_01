@@ -1,4 +1,9 @@
 @font-face {
+  font-family: "GT Walsheim";
+  src: url("/src/assets/fonts/GT-Walsheim/GTWalsheimPro-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
   font-family: "Oswald Medium";
   src: url("/src/assets/fonts/Oswald/static/Oswald-Medium.ttf") format("truetype");
   font-display: swap;
@@ -22,6 +27,10 @@ body {
   padding: 0;
 }
 
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
 a,
 p,
 span,
@@ -29,7 +38,8 @@ ul,
 li,
 table,
 tr,
-td {
+td,
+div {
   font-family: "Inter Regular";
 }
 
@@ -41,12 +51,12 @@ td {
   grid-template-rows: auto 1fr;
 }
 .body:hover {
-  border-color: #f6f6f6;
+  border-color: #f2f2f2;
 }
 
 main {
   height: 100%;
-  background-color: #f6f6f6;
+  background-color: #f2f2f2;
 }
 
 a {
@@ -55,22 +65,18 @@ a {
 
 .navigation__body a {
   display: flex;
-  width: 8vw;
-  text-align: center;
-  justify-content: center;
-  height: 2.4vw;
   align-items: center;
-  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 8vw;
+  height: 2.4vw;
   text-transform: capitalize;
-  color: #fff;
+  color: #f2f2f2;
   border-radius: 4px;
 }
 .navigation__body a.is-active {
   background: linear-gradient(180deg, #33156b, #161616);
   box-shadow: 1px 1px 0px inset rgba(255, 255, 255, 0.2666666667), -1px -1px 0px inset rgba(255, 255, 255, 0.1333333333), -4px -1px 1px #161616, 4px 1px 1px #161616;
-}
-.navigation__body a.is-active:hover {
-  background-color: #401c83;
 }
 
 ul,
@@ -79,68 +85,98 @@ ul li {
   font-size: 0.88vw;
 }
 
-h1 {
-  font-family: "Oswald Medium";
-  font-size: 4.8vw;
+h1, h2 {
+  font-family: "GT Walsheim";
+  font-size: 4.6vw;
   text-align: center;
-  text-shadow: -1px -1px 0px rgba(216, 216, 216, 0.6431372549), 1px 1px #161616, 0px -1px #f6f6f6;
-  letter-spacing: 0.048rem;
-  text-transform: uppercase;
+  text-shadow: -1px -1px 1px rgba(242, 242, 242, 0.6431372549), 1px 1px 1px #161616, 0px -1px 2px #33156b;
+  letter-spacing: 0.016rem;
+  text-transform: capitalize;
+  color: #33156b;
 }
 
 .home-banner h1 {
   position: relative;
   top: -5%;
-  color: #33156b;
+  letter-spacing: 0.16rem;
   z-index: 2;
 }
 
-.square-frame {
-  border: 1px solid rgba(216, 216, 216, 0.2509803922);
-  border-bottom: unset;
-  box-shadow: 1px 1px 1px 0px rgba(216, 216, 216, 0.031372549) inset, -2px -2px 2px 0px rgba(216, 216, 216, 0.031372549) inset;
-  background-color: rgba(216, 216, 216, 0.031372549);
+h2 {
+  letter-spacing: 0.072rem;
+  font-size: 2.24vw;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: rgba(242, 242, 242, 0.6431372549);
+  font-weight: unset;
+  font-family: "Inter Light";
+}
+
+.square {
   position: absolute;
-  border-radius: 50%;
-  aspect-ratio: 1/1;
+  width: 100%;
+  display: flex;
+}
+.square .square-frame {
+  position: absolute;
+  background: rgba(35, 8, 85, 0.2823529412);
+  border: 1px solid rgba(55, 21, 117, 0.4470588235);
+  outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
+  z-index: 1;
 }
 
 button {
   cursor: pointer;
   font-size: 0.78vw;
+  color: rgba(242, 242, 242, 0.6431372549);
 }
 
 .home-banner button {
-  border-radius: 32px;
-  background: unset;
+  border-radius: 50%;
   background: rgba(35, 8, 85, 0.2823529412);
   border: 1px solid rgba(55, 21, 117, 0.4470588235);
   outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
-  padding: 1.2rem;
-  width: 7.2vw;
-  color: #969696;
-  text-transform: capitalize;
+  background-color: rgba(55, 21, 117, 0.1254901961);
+  border: 1px solid rgba(55, 21, 117, 0.4470588235);
+  padding: 1vw;
+  width: 5.6vw;
+  height: 5.6vw;
+  transition: 0.12s ease-in;
+}
+.home-banner button:hover {
+  color: #f2f2f2;
+  border: 1px solid #33156b;
+  outline: 1.6vw solid rgba(55, 21, 117, 0.1254901961);
 }
 
-.footer__body {
-  border-bottom: 1px solid #2a2a2a;
-  border-top: 1px solid #2a2a2a;
-  background: linear-gradient(90deg, #161616, #202020, #161616);
-  display: flex;
-  align-items: center;
-  height: 2.8vw;
-  justify-content: center;
-}
 .footer__body p {
   font-family: "Inter Light";
   font-size: 0.64vw;
-  color: #969696;
+  color: rgba(242, 242, 242, 0.6431372549);
+}
+
+.profile__body__right p {
+  line-height: 1.8vw;
+  font-size: 0.78vw;
+}
+
+.footer__body {
+  border-bottom: 1px solid #242424;
+  border-top: 1px solid #242424;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #161616;
+  height: 2.8vw;
 }
 
 .navigation__body {
-  border-bottom: 1px solid #2a2a2a;
-  border-top: 1px solid #2a2a2a;
-  background: linear-gradient(90deg, #161616, #202020, #161616);
+  border-bottom: 1px solid #242424;
+  border-top: 1px solid #242424;
+  background: linear-gradient(90deg, #161616, #242424, #161616);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,6 +191,7 @@ button {
 }
 .navigation__body ul {
   display: flex;
+  margin: auto 1rem;
 }
 
 .navigation__header {
@@ -163,22 +200,22 @@ button {
   height: 2vw;
   justify-content: flex-end;
   align-items: center;
-  color: #f6f6f6;
+  color: #f2f2f2;
 }
 .navigation__header .social-media {
   display: flex;
   align-items: center;
 }
 .navigation__header .social-media svg {
-  fill: #969696;
+  fill: rgba(242, 242, 242, 0.6431372549);
   width: 0.92vw;
   height: 0.92vw;
   margin: auto 1rem;
   cursor: pointer;
-  transition: 0.1s ease;
+  transition: 0.12s ease-in;
 }
 .navigation__header .social-media svg:hover {
-  fill: #f6f6f6;
+  fill: #f2f2f2;
 }
 
 .home-banner {
@@ -186,40 +223,100 @@ button {
   height: 100%;
   overflow: hidden;
   position: relative;
+  background: linear-gradient(180deg, #0e0324, #130430);
 }
 .home-banner__body {
-  background: linear-gradient(180deg, #0e0324, #130430);
+  display: flex;
   width: 100%;
-  overflow: hidden;
-  position: relative;
+}
+.home-banner__body .content {
+  margin: auto;
   display: flex;
   align-items: center;
+  gap: 2vw;
   justify-content: center;
   flex-direction: column;
 }
-.home-banner__header {
-  width: 64vw;
-  height: 64vw;
-  position: absolute;
-  border-radius: 50%;
-  z-index: 1;
-  top: -40%;
-  left: -16%;
-  background: rgba(35, 8, 85, 0.2823529412);
-  border: 1px solid rgba(55, 21, 117, 0.4470588235);
-  outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
+
+.profile {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(180deg, #0e0324, #130430);
 }
-.home-banner__footer {
-  width: 44vw;
-  height: 44vw;
-  position: absolute;
-  border-radius: 50%;
-  z-index: 1;
-  bottom: -30%;
-  right: -16%;
-  background: rgba(35, 8, 85, 0.2823529412);
+.profile__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  color: #f2f2f2;
+}
+.profile__body__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile__body__left .portrait-frame {
+  display: flex;
+  padding: 2vw;
+  width: 24vw;
+  border-radius: 32%;
+  position: relative;
+  background-color: rgba(55, 21, 117, 0.1254901961);
   border: 1px solid rgba(55, 21, 117, 0.4470588235);
-  outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
+  z-index: 4;
+}
+.profile__body__left .portrait-frame img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  border-radius: 32%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.profile__body__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(55, 21, 117, 0.1254901961);
+  border: 1px solid rgba(55, 21, 117, 0.4470588235);
+}
+.profile__body__right .content-frame {
+  z-index: 2;
+  position: relative;
+  width: 60%;
+  height: 100%;
+  padding: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vw;
+  color: rgba(242, 242, 242, 0.6431372549);
+}
+
+.project-carousel {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(180deg, #0e0324, #130430);
+}
+.project-carousel__body {
+  width: 100%;
+  z-index: 1;
+}
+
+.booklet {
+  background: linear-gradient(180deg, #0e0324, #130430);
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.booklet__body {
+  background: linear-gradient(180deg, #0e0324, #130430);
+  width: 100%;
 }
 
 /*# sourceMappingURL=App.css.map */

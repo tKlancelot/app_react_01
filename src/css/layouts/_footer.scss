@@ -1,14 +1,9 @@
 .footer {
     &__body {
         @include section-border;
-        @include section-linear;
         @include flex-center;
-        height: 2.8vw;
         justify-content: center;
-        p{
-            font-family: $font-primary-light;
-            font-size: 0.64vw;
-            color:$primary-light;
-        }
+        background-color: $write;
+        height: 2.8vw;
     }
 }

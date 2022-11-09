@@ -9,6 +9,10 @@ body {
     padding: 0;
 }
 
+img{
+    image-rendering: -webkit-optimize-contrast;
+}
+
 a,
 p,
 span,
@@ -16,7 +20,8 @@ ul,
 li,
 table,
 tr,
-td {
+td,
+div {
     font-family: $font-primary;
 }
 

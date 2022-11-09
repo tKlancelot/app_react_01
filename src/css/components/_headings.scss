@@ -1,18 +1,32 @@
-h1{
-    font-family: $font-secondary;
-    font-size: 4.8vw;
+h1,h2{
+    font-family: $font-alternative;
+    font-size: 4.6vw;
     text-align: center;
-    text-shadow:-1px -1px 0px #d8d8d8a4, 1px 1px $write,0px -1px $primary;
-    letter-spacing: 0.048rem;
-    text-transform: uppercase;
+    text-shadow:-1px -1px 1px $write-overlay, 1px 1px 1px $write,0px -1px 2px $secondary;
+    letter-spacing: 0.016rem;
+    text-transform: capitalize;
+    color: $secondary;
 }
-
 
 .home-banner{
     h1{
         position: relative;
         top:-5%;
-        color: #33156b;
+        letter-spacing: 0.16rem;
         z-index: 2;
     }
+}
+
+h2{
+    letter-spacing: 0.072rem;
+    font-size: 2.24vw;
+    text-align: start;
+    text-transform: uppercase;
+
+}
+
+h3{
+    color: $write-overlay;
+    font-weight: unset;
+    font-family: $font-primary-light;
 }

@@ -1,9 +1,10 @@
-.square-frame{
-    border:1px solid #d8d8d840;
-    border-bottom:unset;
-    box-shadow: 1px 1px 1px 0px #d8d8d808 inset,-2px -2px 2px 0px #d8d8d808 inset;
-    background-color: #d8d8d808;
+.square{
     position: absolute;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
+    width: 100%;
+    display: flex;
+    .square-frame{
+        position: absolute;
+        @include simple-shadow;
+        z-index: 1;
+    }
 }

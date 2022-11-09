@@ -1,0 +1,11 @@
+.project-carousel{
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    @include background-linear;
+    &__body{
+        width:100%;
+        z-index: 1;
+    }
+}

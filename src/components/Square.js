@@ -1,95 +1,56 @@
 import {React, useLayoutEffect, useRef} from 'react';
-import { gsap, random } from "gsap";
+import { gsap } from "gsap";
 
 
-const Square = () => {
-
-    // const setRandomPosition = () => {
-    //     let randomPos = Math.ceil((Math.random() * 100));
-    //     let offsetValue = randomPos + '%';
-    //     return offsetValue;
-    // }
-
-    // const setRandomWidth = () => {
-    //     let randomWidth = Math.ceil((Math.random() * 100));
-    //     let offsetValue = randomWidth + 'px';
-    //     return offsetValue;
-    // }
-
-    // function randomIntFromInterval(min, max) { // min and max included 
-    // return Math.floor(Math.random() * (max - min + 1) + min)
-    // }
-
-
-    // const setRandomRotation = () => {
-    //     let randomPos = randomIntFromInterval(4,300);
-    //     let offsetValue = randomPos + 'deg';
-    //     return offsetValue;
-    // }
+const Square = (props) => {
     
-    const comp = useRef(); // create a ref for the root level element (for scoping)
+    const comp = useRef();
 
     useLayoutEffect(() => {
     
         let ctx = gsap.context(() => {
-        
-            // var tl = gsap.timeline({repeat: -1, repeatDelay: 1});
 
-            // tl.from(".square-frame", {
-            //     rotation:"360",
-            //     opacity:0,
-            //     x:"random([-300, 300, 5])",
-            //     y:"random([-200, 200, 5])",
-            //     duration:"random([4,8,12,16,20,24])",
-            //     scale:"random(-1, 1, 0.1)",
-            //     ease:"random(['Power2.easeInOut','Power3.linear','Power4.easeIn'])",
-            //     yoyo:true
-            // });
-            // tl.to(".square-frame", {
-            //     rotation:"180",
-            //     x:"random([-250, 250, 5])",
-            //     y:"random([-500, 500, 5])",
-            //     duration:"random([4,8,12,16,20,24])",
-            //     scale:"random(-1, 1, 0.1)",
-            //     ease:"random(['Power2.easeInOut','Power3.linear','Power4.easeIn'])",
-            //     // backgroundColor:'random(["purple,dodgerblue,lightskyblue"])',
-            //     opacity:0.32,
-            //     yoyo:true, 
-            // });
-            // tl.to(".square-frame", {
-            //     rotation:"180",
-            //     x:"random([-500, 500, 5])",
-            //     y:"random([-500, 500, 5])",
-            //     duration:"random([4,8,12,16,20,24])",
-            //     scale:"random(-1, 1, 0.1)",
-            //     ease:"random(['Power2.easeInOut','Power3.linear','Power4.easeIn'])",
-            //     yoyo:true, 
-            // });
-
+            // on pourrait aussi passer des props ici 
         
-    }, comp); // <- IMPORTANT! Scopes selector text
+            var tl = gsap.timeline({repeat: -1, repeatDelay: 1, yoyo:true});
+
+            tl.from(".square-frame", {
+                x:"random([-40, 0, 5])",
+                y:"random([0, 40, 5])",
+                rotation:"random([-8, 8, 1])",
+                duration:6,
+                ease:'Power2.easeOut',
+            }).to(".square-frame",{
+                x:"random([-40, 0, 5])",
+                y:"random([0, 40, 5])",
+                rotation:"random([-10, 10, 1])",
+                duration:6,
+                scale:0.96,
+                ease:"Power2.easeIn",
+            });
+
+
+    }, comp);
     
-    return () => ctx.revert(); // cleanup
+    return () => ctx.revert(); // cleanup ?
     
     }, []); 
 
 
     return (
-        <div ref={comp}>
+        <div ref={comp} className="square">
+            <div className="square-frame" 
+                style={{
+                    marginTop:props.top,
+                    left:props.left,
+                    width:props.width,
+                    height:props.height,
+                    borderRadius:props.radius,
+                    transform:'rotate('+props.rotation+')'
+                }}>
+            </div>
 
- 
-        {/* <div className="square-frame" 
-            style={{
-                top:setRandomPosition(),
-                left:setRandomPosition(),
-                width:setRandomWidth(),
-                // height:setRandomWidth(),
-                transform:"rotate("+setRandomRotation()+")",
-            }}>
-            <div></div>
-        </div> */}
-
-        </div>
+        </div> 
     );
 };
 

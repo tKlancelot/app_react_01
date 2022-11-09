@@ -1,4 +1,10 @@
 @font-face {
+    font-family: "GT Walsheim";
+    src: url("/src/assets/fonts/GT-Walsheim/GTWalsheimPro-Bold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Oswald Medium";
     src: url("/src/assets/fonts/Oswald/static/Oswald-Medium.ttf") format("truetype");
     font-display: swap;

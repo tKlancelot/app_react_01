@@ -1,0 +1,20 @@
+.footer {
+    &__body {
+        p {
+            font-family: $font-primary-light;
+            font-size: 0.64vw;
+            color: $write-overlay;
+        }
+    }
+}
+
+.profile {
+    &__body {
+        &__right {
+            p {
+                line-height: 1.8vw;
+                font-size: 0.78vw;
+            }
+        }
+    }
+}
