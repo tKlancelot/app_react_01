@@ -8,6 +8,6 @@
 * animation 3d
 * présentation d'objet 3d + objets 3d téléchargeables
 
-![Page About](/public/screenshots/screen-one.png?raw=true=100x60 "Screen One")
 
-<img src="/public/screenshots/screen-two.png" width="200" height="200" />
+<img src="/public/screenshots/screen-one.png" width="192" height="108" />
+<img src="/public/screenshots/screen-two.png" width="192" height="108" />
