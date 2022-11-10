@@ -32,7 +32,7 @@
 }
 
 @mixin background-linear {
-    background: linear-gradient(180deg, #0e0324, #130430);
+    background: linear-gradient(180deg, $secondary-darkest, $secondary-dark);
 }
 
 @mixin item-transition {

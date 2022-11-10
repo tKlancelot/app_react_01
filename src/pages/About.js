@@ -45,8 +45,8 @@ const About = () => {
             <div className="profile__body__right">
               <div className="content-frame">
                 <h2>Portrait.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A laborum adipisci magnam, nam ipsa eligendi in quas quam asperiores at totam nisi corrupti architecto repellendus aut dolores libero quis aspernatur.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quasi, facilis, excepturi consequuntur ipsam fugit rem sapiente, magnam ipsa minus impedit vitae veritatis autem reprehenderit voluptatem earum inventore placeat voluptas.</p>
+                <p>Suite à des études de langues à l'université et une expérience de huit ans dans le commerce de grande distribution, je décide d'entreprendre, il y a maintenant 4 ans de cela, une révolution dans ma carrière. Je découvre alors le développement web et je me prends de passion pour les nouvelles technologies et en particulier pour l'intégration. J'en ferai très rapidement mon métier actuel.</p>
+                <p>Mon objectif : développer des sites beaux et bien construits. Mais ... pas que ! Rester en veille face à l'évolution rapide des technologies du web, afin de proposer des sites et des applications de qualité, durables et dans l'ère du temps !</p>
               </div>
             </div>
           </div>

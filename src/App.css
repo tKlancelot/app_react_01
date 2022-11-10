@@ -59,6 +59,10 @@ main {
   background-color: #f2f2f2;
 }
 
+.grise {
+  filter: blur(1px);
+}
+
 a {
   text-decoration: none;
 }
@@ -89,7 +93,7 @@ h1, h2 {
   font-family: "GT Walsheim";
   font-size: 4.6vw;
   text-align: center;
-  text-shadow: -1px -1px 1px rgba(242, 242, 242, 0.6431372549), 1px 1px 1px #161616, 0px -1px 2px #33156b;
+  text-shadow: -1px -1px 1px rgba(242, 242, 242, 0.768627451), 1px 1px 1px #161616, 0px -1px 2px #33156b;
   letter-spacing: 0.016rem;
   text-transform: capitalize;
   color: #33156b;
@@ -109,8 +113,8 @@ h2 {
   text-transform: uppercase;
 }
 
-h3 {
-  color: rgba(242, 242, 242, 0.6431372549);
+h3, h4, h6 {
+  color: rgba(242, 242, 242, 0.768627451);
   font-weight: unset;
   font-family: "Inter Light";
 }
@@ -131,10 +135,10 @@ h3 {
 button {
   cursor: pointer;
   font-size: 0.78vw;
-  color: rgba(242, 242, 242, 0.6431372549);
 }
 
 .home-banner button {
+  color: rgba(242, 242, 242, 0.768627451);
   border-radius: 50%;
   background: rgba(35, 8, 85, 0.2823529412);
   border: 1px solid rgba(55, 21, 117, 0.4470588235);
@@ -152,15 +156,51 @@ button {
   outline: 1.6vw solid rgba(55, 21, 117, 0.1254901961);
 }
 
+p {
+  color: rgba(242, 242, 242, 0.768627451);
+}
+
+span {
+  color: #CDFC8E;
+}
+
 .footer__body p {
   font-family: "Inter Light";
   font-size: 0.64vw;
-  color: rgba(242, 242, 242, 0.6431372549);
 }
 
 .profile__body__right p {
   line-height: 1.8vw;
   font-size: 0.78vw;
+}
+
+table,
+tr,
+td {
+  color: rgba(242, 242, 242, 0.768627451);
+  font-size: 0.68vw;
+}
+
+table {
+  border-spacing: 0;
+}
+table td {
+  padding: 0.5rem;
+}
+table tbody td:nth-child(1) {
+  color: rgba(242, 242, 242, 0.768627451);
+  width: 8vw;
+}
+table tbody td:nth-child(2) {
+  width: 18vw;
+}
+
+tr:nth-child(odd) {
+  background-color: #33156b;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(55, 21, 117, 0.4470588235);
 }
 
 .footer__body {
@@ -178,8 +218,8 @@ button {
   border-top: 1px solid #242424;
   background: linear-gradient(90deg, #161616, #242424, #161616);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .navigation__body .logotype {
   display: flex;
@@ -207,7 +247,7 @@ button {
   align-items: center;
 }
 .navigation__header .social-media svg {
-  fill: rgba(242, 242, 242, 0.6431372549);
+  fill: rgba(242, 242, 242, 0.768627451);
   width: 0.92vw;
   height: 0.92vw;
   margin: auto 1rem;
@@ -233,9 +273,9 @@ button {
   margin: auto;
   display: flex;
   align-items: center;
-  gap: 2vw;
   justify-content: center;
   flex-direction: column;
+  gap: 2vw;
 }
 
 .profile {
@@ -285,14 +325,14 @@ button {
 .profile__body__right .content-frame {
   z-index: 2;
   position: relative;
-  width: 60%;
+  width: 72%;
   height: 100%;
   padding: 4vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   gap: 2vw;
-  color: rgba(242, 242, 242, 0.6431372549);
+  color: rgba(242, 242, 242, 0.768627451);
 }
 
 .project-carousel {
@@ -305,6 +345,10 @@ button {
 .project-carousel__body {
   width: 100%;
   z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2vw;
+  padding: 2vw;
 }
 
 .booklet {
@@ -317,6 +361,44 @@ button {
 .booklet__body {
   background: linear-gradient(180deg, #0e0324, #130430);
   width: 100%;
+}
+
+.project-card {
+  background: rgba(35, 8, 85, 0.2823529412);
+  border: 1px solid rgba(55, 21, 117, 0.4470588235);
+  outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
+  background-color: #130430;
+  display: grid;
+  padding: 1vw;
+  height: 100%;
+}
+
+.details__panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  flex-direction: column;
+}
+.details__panel__frame {
+  border-radius: 6px;
+  background-color: #0e0324;
+  border: 1px solid rgba(55, 21, 117, 0.4470588235);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2vw;
+  padding: 2vw;
+}
+.details__panel__body {
+  margin: auto;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=App.css.map */

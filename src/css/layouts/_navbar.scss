@@ -2,20 +2,16 @@
     &__body {
         @include section-border;
         @include section-linear;
-        display: flex;
+        @include flex-center;
         justify-content: space-between;
-        align-items: center;
-
         .logotype {
             display: flex;
             svg{
                 margin: 1rem;
                 height: 3.2vw;
                 width: 100%;
-
             }
         }
-
         ul {
             display: flex;
             margin:auto 1rem;

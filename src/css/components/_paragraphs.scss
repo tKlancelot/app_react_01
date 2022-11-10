@@ -1,12 +1,21 @@
+p{
+    color: $write-overlay;
+}
+
+span{
+    color:#CDFC8E;
+}
+
 .footer {
     &__body {
         p {
             font-family: $font-primary-light;
             font-size: 0.64vw;
-            color: $write-overlay;
         }
     }
 }
+
+
 
 .profile {
     &__body {

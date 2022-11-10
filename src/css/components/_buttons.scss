@@ -1,11 +1,11 @@
 button{
     cursor: pointer;
     font-size: 0.78vw;
-    color: $write-overlay;
 }
 
 .home-banner {
     button {
+        color: $write-overlay;
         border-radius: 50%;
         @include simple-shadow;
         @include border-thema;

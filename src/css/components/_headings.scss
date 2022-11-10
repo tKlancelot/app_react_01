@@ -8,6 +8,7 @@ h1,h2{
     color: $secondary;
 }
 
+
 .home-banner{
     h1{
         position: relative;
@@ -25,7 +26,7 @@ h2{
 
 }
 
-h3{
+h3,h4,h6{
     color: $write-overlay;
     font-weight: unset;
     font-family: $font-primary-light;

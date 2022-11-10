@@ -1,0 +1,33 @@
+table,
+tr,
+td {
+    color: $write-overlay;
+    font-size: 0.68vw;
+}
+
+table {
+    border-spacing: 0;
+
+    td {
+        // border: 1px solid;
+        padding: 0.5rem;
+    }
+    tbody{
+        td:nth-child(1) {
+            color: $write-overlay;
+            width: 8vw;
+        }
+
+        td:nth-child(2) {
+            width: 18vw;
+        }
+    }
+}
+
+tr:nth-child(odd) {
+    background-color: $secondary;
+}
+
+tr:nth-child(even) {
+    background-color: $border-color;
+}

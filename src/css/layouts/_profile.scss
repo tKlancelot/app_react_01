@@ -38,15 +38,14 @@
             .content-frame{
                 z-index: 2;
                 position: relative;
-                width: 60%;
+                width: 72%;
                 height: 100%;
                 padding:4vw;
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
+                flex-direction: column;
                 gap:$gap;
                 color:$write-overlay;
-
             }
         }
     }

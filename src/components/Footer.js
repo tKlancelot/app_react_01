@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer class="footer">
+        <footer className="footer">
             <div className="footer__body">
                 <p>copyright © Tarik Louatah 2022 - Tous droits réservés</p>
             </div>

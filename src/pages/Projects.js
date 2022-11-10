@@ -1,16 +1,54 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
+import ProjectCard from "../components/ProjectCard";
 import Square from "../components/Square";
-import useFetch from "../usefetch";
+import { projectList } from "../datas/projectList";
+// import useFetch from "../usefetch";
 
 const Projects = () => {
-  const projets = useFetch(
-    "https://leviathan-pacifique.com/wp-json/wp/v2/portfolio"
-  );
+
+  // const projets = useFetch(
+  //   "https://leviathan-pacifique.com/wp-json/wp/v2/portfolio"
+  // );
+  /* {projets &&
+  projets.map((projet, index) => (
+    <div key={index}>
+      <h3> {projet.title.rendered} </h3>
+    </div>
+  ))} */
+
+  // const [state, setState] = useState();
+
+  let state = {
+    projects: projectList
+  }
+
+  let {projects} = state;
+
+  // const projects = projectList;
+
+
+  const removeLastComa = () => {
+    let item = document.querySelectorAll('table td:nth-child(2) > span:last-child > span');
+    item.forEach((e) => {
+      e.childNodes[1].remove();
+    })
+  }
+  
+
+
+  useEffect(() => {
+    setTimeout(function(){
+      removeLastComa();
+    },10)
+  },[]);
+
+
+
 
   return (
-    <div class="body">
+    <div className="body">
       <Navigation />
       <main>
         <div className="project-carousel">
@@ -41,12 +79,23 @@ const Projects = () => {
             />
           </div>
           <div className="project-carousel__body">
-            {projets &&
-              projets.map((projet, index) => (
-                <div key={index}>
-                  <h3> {projet.title.rendered} </h3>
-                </div>
-              ))}
+
+            {projects && projects.map((projet, index) => (
+              <ProjectCard 
+                key={index} 
+                name={projet.name} 
+                description={projet.description} 
+                environment={projet.environment} 
+                development={projet.development} 
+                category={projet.category} 
+                technos={projet.technos} 
+                librairies={projet.librairies} 
+                plugins={projet.plugins} 
+                permalink={projet.permalink}
+              />
+            ))}
+
+
           </div>
         </div>
       </main>

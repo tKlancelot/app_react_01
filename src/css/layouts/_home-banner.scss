@@ -9,10 +9,9 @@
         width: 100%;
         .content{
             margin: auto;   
-            @include flex-center;
-            gap:$gap;
-            justify-content: center;
+            @include flex-center-center;
             flex-direction: column;
+            gap:$gap;
         }
     }
 }
