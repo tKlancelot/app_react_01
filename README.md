@@ -9,4 +9,5 @@
 * présentation d'objet 3d + objets 3d téléchargeables
 
 ![Page About](/public/screenshots/screen-one.png?raw=true=100x60 "Screen One")
-![Page Listing](./public/screenshots/screen-two.png =250x)
+
+<img src="/public/screenshots/screen-two.png" width="200" height="200" />
