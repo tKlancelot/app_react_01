@@ -18,7 +18,6 @@ const Projects = () => {
     </div>
   ))} */
 
-  // const [state, setState] = useState();
 
   let state = {
     projects: projectList
@@ -53,7 +52,31 @@ const Projects = () => {
       <main>
         <div className="project-carousel">
           <div className="project-carousel__header">
-            <Square
+            barre des filtres
+          </div>
+          <div className="project-carousel__body">
+
+            {projects && projects.map((projet, index) => (
+              <ProjectCard 
+                key={index} 
+                name={projet.name} 
+                description={projet.description} 
+                environment={projet.environment} 
+                development={projet.development} 
+                category={projet.category} 
+                technos={projet.technos} 
+                librairies={projet.librairies} 
+                plugins={projet.plugins} 
+                picture={projet.picture} 
+                permalink={projet.permalink}
+              />
+            ))}
+
+
+          </div>
+
+          <div className="project-carousel__footer">
+                        <Square
               top="-10%"
               left="-10%"
               width="56vw"
@@ -77,25 +100,6 @@ const Projects = () => {
               radius="24%"
               rotation="-2deg"
             />
-          </div>
-          <div className="project-carousel__body">
-
-            {projects && projects.map((projet, index) => (
-              <ProjectCard 
-                key={index} 
-                name={projet.name} 
-                description={projet.description} 
-                environment={projet.environment} 
-                development={projet.development} 
-                category={projet.category} 
-                technos={projet.technos} 
-                librairies={projet.librairies} 
-                plugins={projet.plugins} 
-                permalink={projet.permalink}
-              />
-            ))}
-
-
           </div>
         </div>
       </main>

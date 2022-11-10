@@ -3,6 +3,7 @@
     height: 100%;
     overflow: hidden;
     position: relative;
+    min-height: 40vw;
     @include background-linear;
     &__body {
         display: grid;

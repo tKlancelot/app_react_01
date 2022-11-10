@@ -9,6 +9,7 @@ export const projectList = [
 		librairies:['gsap','alpine.js'],
 		plugins:['contact form 7'],
 		permalink:'https://carmona-paris.fr/',
+		picture:'./images/screen-carmona.png',
 		id: '1ed'
 	},
 	{
@@ -21,6 +22,7 @@ export const projectList = [
 		librairies:['jQuery'],
 		plugins:['contact form 7','all-in-one wp-migrate'],
 		permalink:"#",
+		// picture:'./images/khoa-vo.jpg',
 		id: '2ab'
 	},
 	{
@@ -33,10 +35,12 @@ export const projectList = [
 		librairies:['gsap','Three.js','alpine.js'],
 		plugins:['contact form 7','acp','all-in-one wp-migrate'],
 		permalink:"https://leviathan-pacifique.com/",
+		picture:'./images/screen-portfolio-classic-theme.png',
 		id: '24c'
 	},
 	{
 		name: 'medijob',
+		description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid doloribus nam iure alias eveniet iusto libero fugiat soluta quibusdam at delectus ut distinctio aut asperiores, tenetur dolor nisi optio beatae.',
 		category: ['intégration twig', 'refactoring','dvt front-end'],
 		environment:'symfony 5.4.10',
 		development:['vscode','preprod','github','webpack'],
@@ -44,6 +48,7 @@ export const projectList = [
 		librairies:['gsap'],
 		plugins:[],
 		permalink:"https://www.medijob.fr/",
+		picture:'./images/screen-medijob.png',
 		id: '24c'
 	}
 ]

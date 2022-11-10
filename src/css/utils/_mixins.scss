@@ -28,7 +28,7 @@
 }
 
 @mixin section-linear {
-    background: linear-gradient(90deg, $write, $dark-border, $write);
+    background: linear-gradient(90deg, $black, $dark-border, $black);
 }
 
 @mixin background-linear {

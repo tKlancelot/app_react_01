@@ -1,15 +1,31 @@
 .project-carousel{
-    display: flex;
+    display: grid;
     height: 100%;
     overflow: hidden;
     position: relative;
     @include background-linear;
+    grid-template-rows: auto 1fr;
+    min-height: 40vw;
+    &__header{
+        background-color: $black;
+        @include section-border;
+        z-index: 1;
+        padding: 0.5rem;
+        color:$write-overlay;
+    }
+
     &__body{
         width:100%;
         z-index: 1;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-gap: $gap;
-        padding: $gap;
+        padding: $gap 8vw;
+        place-content: center;
+    }
+    &__footer{
+        position: absolute;
+        width:100%;
+        z-index:0;
     }
 }

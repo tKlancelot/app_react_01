@@ -2,7 +2,7 @@ table,
 tr,
 td {
     color: $write-overlay;
-    font-size: 0.68vw;
+    font-size: 0.72vw;
 }
 
 table {
@@ -10,16 +10,16 @@ table {
 
     td {
         // border: 1px solid;
-        padding: 0.5rem;
+        padding: 0.75rem;
     }
     tbody{
         td:nth-child(1) {
             color: $write-overlay;
-            width: 8vw;
+            width: 10vw;
         }
 
         td:nth-child(2) {
-            width: 18vw;
+            width: 20vw;
         }
     }
 }

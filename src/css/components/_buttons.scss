@@ -13,10 +13,32 @@ button{
         width: 5.6vw;
         height: 5.6vw;
         @include item-transition;
-        &:hover{
-            color:$primary;
-            border:1px solid $secondary;
-            outline: 1.6vw solid $outline;
-        }
+        outline-width: 0vw;
+        outline-color: transparent;
     }
 }
+
+.project-card__body,
+.details__panel__frame__header{
+        button{
+            display: flex;
+            background:unset;
+            border:unset;
+            svg{
+                display: flex;
+                align-items: center;
+                path{
+                    fill:$write-overlay;
+                    transform-origin: center;
+                    @include item-transition;
+                }
+                &:hover{
+                    path{
+                        fill: $primary;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+

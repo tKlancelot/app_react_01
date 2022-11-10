@@ -3,6 +3,7 @@
     height: 100%;
     overflow: hidden;
     position: relative;
+    min-height: 40vw;
     @include background-linear;
     &__body{
         display: flex;
@@ -11,7 +12,15 @@
             margin: auto;   
             @include flex-center-center;
             flex-direction: column;
-            gap:$gap;
+            gap:4vw;
+        }
+    }
+    &__header{
+        svg{
+            position: absolute;
+        }
+        svg *{
+            stroke:$border-color;
         }
     }
 }
