@@ -1,6 +1,6 @@
 import { React, useRef, useLayoutEffect } from "react";
 import Navigation from "../components/Navigation";
-import { BasisCurve } from "react-svg-curve";
+// import { BasisCurve } from "react-svg-curve";
 import Footer from "../components/Footer";
 import Square from "../components/Square";
 import gsap from "gsap";
@@ -24,7 +24,7 @@ const Home = () => {
 
       const item = document.querySelector(".home-banner__body .content button");
 
-      const animation = gsap.to(item, {
+      gsap.to(item, {
         duration: 1.2,
         color: "#fff",
         border: "1px solid #33156b",
