@@ -1,4 +1,5 @@
-input,label{
+input,
+label {
     font-size: 0.76vw;
     text-transform: capitalize;
 }
@@ -24,6 +25,8 @@ input,label{
                 }
 
                 label {
+                    padding-top: 0.16rem;
+
                     &:hover {
                         color: $primary;
                     }
@@ -64,6 +67,45 @@ input,label{
                     outline: 2px solid $secondary-medium;
                     outline-offset: 0rem;
                 }
+            }
+        }
+    }
+}
+
+.contact {
+    &__body {
+        form {
+            .input-group {
+                display: grid;
+                grid-template-columns: 0.5fr 1fr;
+                place-items: baseline;
+
+                &:nth-child(4) {
+                    width: 100%;
+                    margin: auto;
+                    display: flex;
+
+                    button {
+                        width: 24%;
+                        margin:auto;
+                    }
+                }
+            }
+
+            label {
+                color: $primary;
+            }
+
+            textarea{
+                                min-height: 6vw;
+            }
+            input,textarea,button{
+                background-color: $secondary-medium;
+                border:1px solid $secondary;
+                border-radius: 4px;
+                color:$primary;
+                width:100%;
+                padding:0.5rem;
             }
         }
     }

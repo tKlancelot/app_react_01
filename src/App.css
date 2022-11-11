@@ -253,7 +253,8 @@ tr:nth-child(even) {
   background-color: rgba(55, 21, 117, 0.4470588235);
 }
 
-input, label {
+input,
+label {
   font-size: 0.76vw;
   text-transform: capitalize;
 }
@@ -275,6 +276,9 @@ input, label {
 .project-carousel__header ul li input,
 .project-carousel__header ul li label {
   cursor: pointer;
+}
+.project-carousel__header ul li label {
+  padding-top: 0.16rem;
 }
 .project-carousel__header ul li label:hover {
   color: #f2f2f2;
@@ -309,6 +313,35 @@ input, label {
 .project-carousel__header ul li input[type=radio]:focus {
   outline: 2px solid #230c4e;
   outline-offset: 0rem;
+}
+
+.contact__body form .input-group {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  place-items: baseline;
+}
+.contact__body form .input-group:nth-child(4) {
+  width: 100%;
+  margin: auto;
+  display: flex;
+}
+.contact__body form .input-group:nth-child(4) button {
+  width: 24%;
+  margin: auto;
+}
+.contact__body form label {
+  color: #f2f2f2;
+}
+.contact__body form textarea {
+  min-height: 6vw;
+}
+.contact__body form input, .contact__body form textarea, .contact__body form button {
+  background-color: #230c4e;
+  border: 1px solid #33156b;
+  border-radius: 4px;
+  color: #f2f2f2;
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .footer__body {
@@ -366,7 +399,8 @@ input, label {
   fill: #f2f2f2;
 }
 
-.home-banner {
+.home-banner,
+.contact {
   display: flex;
   height: 100%;
   overflow: hidden;
@@ -374,11 +408,13 @@ input, label {
   min-height: 40vw;
   background: linear-gradient(180deg, #0e0324, #18063b);
 }
-.home-banner__body {
+.home-banner__body,
+.contact__body {
   display: flex;
   width: 100%;
 }
-.home-banner__body .content {
+.home-banner__body .content,
+.contact__body .content {
   margin: auto;
   display: flex;
   align-items: center;
@@ -386,11 +422,32 @@ input, label {
   flex-direction: column;
   gap: 4vw;
 }
-.home-banner__header svg {
+.home-banner__header svg,
+.contact__header svg {
   position: absolute;
 }
-.home-banner__header svg * {
+.home-banner__header svg *,
+.contact__header svg * {
   stroke: rgba(55, 21, 117, 0.4470588235);
+}
+
+.contact__body {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  margin: auto;
+  gap: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+.contact__body .contact-form {
+  width: 100%;
+}
+.contact__body .contact-form form {
+  width: 100%;
+  display: grid;
+  gap: 1vw;
 }
 
 .profile {

@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Booklet from "./pages/Booklet";
 import Projects from "./pages/Projects";
 import PageNotFound from "./pages/PageNotFound";
+import Contact from "./pages/Contact";
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/booklet" element={<Booklet />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
