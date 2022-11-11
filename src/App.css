@@ -79,8 +79,8 @@ a {
   border-radius: 4px;
 }
 .navigation__body a.is-active {
-  background: linear-gradient(180deg, #33156b, #161616);
-  box-shadow: 1px 1px 0px inset rgba(255, 255, 255, 0.2666666667), -1px -1px 0px inset rgba(255, 255, 255, 0.1333333333), -4px -1px 1px #161616, 4px 1px 1px #161616;
+  background: linear-gradient(180deg, #33156b, #18063b);
+  box-shadow: 1px 1px 0px inset rgba(255, 255, 255, 0.2666666667), -1px -1px 0px inset rgba(255, 255, 255, 0.2666666667), -4px -1px 1px #0e0324, 4px 1px 1px #0e0324;
 }
 
 .details__panel__frame__footer a {
@@ -94,12 +94,14 @@ a {
   outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
   text-transform: capitalize;
   border-radius: 32px;
+  background-color: #33156b;
   width: 6.4vw;
   height: 2.4vw;
   padding: 0.5vw;
 }
 .details__panel__frame__footer a:hover {
-  background-color: #33156b;
+  border: 1px solid #33156b;
+  background-color: transparent;
   color: #f2f2f2;
 }
 
@@ -122,7 +124,7 @@ h1, h2 {
 h3, h4, h6 {
   color: rgba(242, 242, 242, 0.6431372549);
   font-weight: unset;
-  font-family: "Inter Light";
+  font-family: "Inter Regular";
 }
 
 .home-banner h1 {
@@ -315,14 +317,14 @@ input, label {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #161616;
+  background-color: #0e0324;
   height: 2.8vw;
 }
 
 .navigation__body {
   border-bottom: 1px solid #242424;
   border-top: 1px solid #242424;
-  background: linear-gradient(90deg, #161616, #242424, #161616);
+  background: linear-gradient(90deg, #090118, #18063b, #090118);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -482,7 +484,7 @@ input, label {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2vw;
-  padding: 2vw 8vw;
+  padding: 0 6vw;
   place-content: center;
 }
 .project-carousel__footer {

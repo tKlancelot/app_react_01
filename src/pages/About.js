@@ -45,7 +45,7 @@ const About = () => {
             <div className="profile__body__right">
               <div className="content-frame">
                 {/* <h2>Portrait.</h2> */}
-                <h2>Qui suis-je ?</h2>
+                <h2>Portrait.</h2>
                 <p>Suite à des études de langues à l'université et une expérience de huit ans dans le commerce de grande distribution, je décide d'entreprendre, il y a maintenant 4 ans de cela, une révolution dans ma carrière. Je découvre alors le développement web et je me prends de passion pour les nouvelles technologies et en particulier pour l'intégration. J'en ferai très rapidement mon métier actuel.</p>
                 <p>Mon objectif : développer des sites beaux et bien construits. Mais ... pas que ! Rester en veille face à l'évolution rapide des technologies du web, afin de proposer des sites et des applications de qualité, durables et dans l'ère du temps !</p>
               </div>
