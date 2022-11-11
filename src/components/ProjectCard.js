@@ -14,14 +14,14 @@ const ProjectCard = (props) => {
         })
     }
 
-    let {index,name,description,environment,category,development,technos,librairies,plugins,permalink,picture} = props;
+    let {index,name,environment,category,development,technos,librairies,plugins,permalink,picture} = props;
 
     return (
         <div>
             <div className="project-card" key={index}>
                 <div className="project-card__header">
                     {/* <img src={picture}/> */}
-                    {picture ? <img src={picture}/> : <img src='./images/default-background.jpg'/> }
+                    {picture ? <img src={picture} alt={name}/> : <img src='./images/default-background.jpg' alt="par défaut"/> }
                     
                 </div>
                 <div className="project-card__body">
@@ -31,7 +31,7 @@ const ProjectCard = (props) => {
                     </button>
                 </div>
                 {/* <p>Description : {description}</p> */}
-                {(state.showInfo == true) &&
+                {(state.showInfo === true) &&
                     <div className="details__panel">
                         <div className="details__panel__frame">
                             <div className="details__panel__frame__header">

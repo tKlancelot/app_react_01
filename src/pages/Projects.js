@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import ProjectCard from "../components/ProjectCard";
@@ -18,14 +18,34 @@ const Projects = () => {
     </div>
   ))} */
 
+  // let state = {
+  //   projects: projectList,
+  //   radios:[
+  //     {id:1, value: "wordpress"},
+  //     {id:2, value: "react"},
+  //     {id:3, value: "symfony"}
+  //   ],
+  //   selectedRadio : 'wordpress'
+  // }
 
-  let state = {
-    projects: projectList
+  const [state,setState] = useState({
+    projects: projectList,
+    radios:[
+      {id:1, value: "wordpress"},
+      {id:2, value: "react"},
+      {id:3, value: "symfony"}
+    ],
+    selectedRadio : 'wordpress'
+  })
+
+
+  let {projects, radios, selectedRadio } = state;
+
+  const handleRadio = (event) => {
+    let value = event.target.value;
+    setState({...state,selectedRadio : value});
   }
 
-  let {projects} = state;
-
-  // const projects = projectList;
 
 
   const removeLastComa = () => {
@@ -52,11 +72,30 @@ const Projects = () => {
       <main>
         <div className="project-carousel">
           <div className="project-carousel__header">
-            barre des filtres
+            <ul>
+              {radios.map((radio) => {
+                return(
+                  <li key={radio.id}>
+                    <input 
+                      type="radio"
+                      name="radio"
+                      checked={radio.value === selectedRadio}
+                      value={radio.value}
+                      id={radio.value}
+                      onChange={handleRadio}
+                    />
+                    <span class="checkmark"></span>
+                    <label htmlFor={radio.value}>{radio.value}</label>
+                  </li>
+                )
+              })}
+            </ul>
           </div>
           <div className="project-carousel__body">
 
-            {projects && projects.map((projet, index) => (
+            {projects && projects
+            .filter(item => item.environment.includes(selectedRadio))
+            .map((projet, index) => (
               <ProjectCard 
                 key={index} 
                 name={projet.name} 

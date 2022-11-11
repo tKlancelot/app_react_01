@@ -50,5 +50,18 @@ export const projectList = [
 		permalink:"https://www.medijob.fr/",
 		picture:'./images/screen-medijob.png',
 		id: '24c'
+	},
+	{
+		name: 'dostgrill',
+		description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid doloribus nam iure alias eveniet iusto libero fugiat soluta quibusdam at delectus ut distinctio aut asperiores, tenetur dolor nisi optio beatae.',
+		category: ['création thème wp', 'refactoring'],
+		environment:'wordpress',
+		development:['vscode','preprod'],
+		technos:['html5','sass','php','js'],
+		librairies:['gsap'],
+		plugins:['contact-form 7'],
+		permalink:"https://www.dostgrill.com/",
+		picture:'./images/screen-dostgrill.png',
+		id: '28e'
 	}
 ]

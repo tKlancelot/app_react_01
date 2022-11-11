@@ -7,10 +7,9 @@
     grid-template-rows: auto 1fr;
     min-height: 40vw;
     &__header{
-        background-color: $black;
-        @include section-border;
+        background-color: $secondary-darkest;
+        border-bottom: 1px solid $dark-border;
         z-index: 1;
-        padding: 0.5rem;
         color:$write-overlay;
     }
 
@@ -21,7 +20,7 @@
         grid-template-columns: repeat(3,1fr);
         grid-gap: $gap;
         padding: $gap 8vw;
-        place-content: center;
+        place-content:center;
     }
     &__footer{
         position: absolute;

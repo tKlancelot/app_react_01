@@ -9,9 +9,9 @@ const Navigation = () => {
 
   return (
     <div className="navigation">
-      <div className="navigation__header">
+      {/* <div className="navigation__header">
         <Topbar />
-      </div>
+      </div> */}
       <div className="navigation__body">
         <Logo />
         <ul className="">

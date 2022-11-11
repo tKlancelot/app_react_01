@@ -1,0 +1,70 @@
+input,label{
+    font-size: 0.76vw;
+    text-transform: capitalize;
+}
+
+.project-carousel {
+    &__header {
+        ul {
+            @include flex-center;
+            height: 2.4vw;
+            justify-content: space-evenly;
+            width: 36%;
+            margin: auto;
+
+            li {
+                display: flex;
+                justify-content: center;
+                gap: 0.75rem;
+                width: 100%;
+
+                input,
+                label {
+                    cursor: pointer;
+                }
+
+                label {
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+
+
+                input[type="radio"] {
+                    appearance: none;
+                    /* Add if not using autoprefixer */
+                    -webkit-appearance: none;
+                    /* Remove most all native input styles */
+                    appearance: none;
+                    /* For iOS < 15 */
+                    background-color: $secondary-dark;
+                    width: 1vw;
+                    height: 1vw;
+                    border-radius: 24%;
+                    transform: translateY(0.05em);
+                    display: grid;
+                    place-content: center;
+                }
+
+                input[type="radio"]::before {
+                    content: "";
+                    width: 1vw;
+                    height: 1vw;
+                    border-radius: 24%;
+                    transform: scale(0);
+                    transition: 0.24s ease-in;
+                    background-color: $secondary;
+                }
+
+                input[type="radio"]:checked::before {
+                    transform: scale(1);
+                }
+
+                input[type="radio"]:focus {
+                    outline: 2px solid $secondary-medium;
+                    outline-offset: 0rem;
+                }
+            }
+        }
+    }
+}
