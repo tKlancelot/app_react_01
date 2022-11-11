@@ -256,7 +256,6 @@ tr:nth-child(even) {
 input,
 label {
   font-size: 0.76vw;
-  text-transform: capitalize;
 }
 
 .project-carousel__header ul {
