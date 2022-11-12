@@ -76,35 +76,61 @@ label {
         form {
             .input-group {
                 display: grid;
-                grid-template-columns: 0.5fr 1fr;
-                place-items: baseline;
 
-                &:nth-child(4) {
-                    width: 100%;
-                    margin: auto;
-                    display: flex;
-
+                &:nth-child(5) {
                     button {
-                        width: 24%;
-                        margin:auto;
+                        width: 36%;
+                        margin: auto;
                     }
                 }
             }
 
-            label {
-                color: $primary;
+            .group-duo {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1vw;
             }
 
-            textarea{
-                                min-height: 6vw;
+            label {
+                color: $write-overlay;
+                min-height: 2vw;
+                @include flex-center;
+                font-size: 1vw;
             }
-            input,textarea,button{
+
+            input,
+            textarea,
+            button {
                 background-color: $secondary-medium;
-                border:1px solid $secondary;
+                border: 1px solid $secondary;
+                font-family: $font-primary;
                 border-radius: 4px;
-                color:$primary;
-                width:100%;
-                padding:0.5rem;
+                color: $primary;
+                width: 100%;
+                padding: 0.5rem 0.75rem;
+                min-height: 2.4vw;
+                &:focus{
+                    outline: unset;
+                }
+            }
+
+            ::placeholder{
+                color:$write-overlay;
+                opacity: 0.6;
+                font-size: 0.8vw;
+                letter-spacing: 0.016rem;
+            }
+
+            label.star {
+                &::after {
+                    content: '*';
+                    color: $alternative;
+                    text-indent: 0.16rem;
+                }
+            }
+
+            textarea {
+                min-height: 8vw;
             }
         }
     }

@@ -1,7 +1,5 @@
 .project-card {
-    @include simple-shadow;
-    background-color: $secondary-medium;
-    border-radius: 6px;
+    @include simple-card;
     display: flex;
     flex-direction: column;
     gap: 1vw;

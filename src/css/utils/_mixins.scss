@@ -23,8 +23,8 @@
 
 
 @mixin section-border {
-    border-bottom: 1px solid $dark-border;
-    border-top: 1px solid $dark-border;
+    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $border-color;
 }
 
 @mixin section-linear {
@@ -37,4 +37,10 @@
 
 @mixin item-transition {
     transition: 0.12s ease-in;
+}
+
+@mixin simple-card {
+    @include simple-shadow;
+    background-color: $secondary-medium;
+    border-radius: 6px;
 }

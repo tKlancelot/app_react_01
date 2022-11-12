@@ -1,6 +1,5 @@
 import { React, useRef, useLayoutEffect } from "react";
 import Navigation from "../components/Navigation";
-// import { BasisCurve } from "react-svg-curve";
 import Footer from "../components/Footer";
 import Square from "../components/Square";
 import gsap from "gsap";
@@ -36,8 +35,8 @@ const Home = () => {
         // paused: true
       });
 
-    //   item.addEventListener("mouseover", () => animation.pause());
-    //   item.addEventListener("mouseout", () => animation.restart());
+      //   item.addEventListener("mouseover", () => animation.pause());
+      //   item.addEventListener("mouseout", () => animation.restart());
     }, comp); // <- IMPORTANT! Scopes selector text
 
     return () => ctx.revert(); // cleanup
@@ -81,53 +80,6 @@ const Home = () => {
               radius="0% 36%"
               rotation="12deg"
             />
-            {/* <svg width="1200" height="400">
-              <BasisCurve
-                showPoints={false}
-                data={[
-                  [0, 200],
-                  [250, 50],
-                  [800, 200],
-                  [900, -10],
-                ]}
-              />
-              <BasisCurve
-                showPoints={false}
-                data={[
-                  [0, 190],
-                  [250, 40],
-                  [800, 196],
-                  [900, -20],
-                ]}
-              />
-              <BasisCurve
-                showPoints={false}
-                data={[
-                  [0, 180],
-                  [250, 30],
-                  [800, 192],
-                  [900, -30],
-                ]}
-              />
-              <BasisCurve
-                showPoints={false}
-                data={[
-                  [0, 170],
-                  [250, 20],
-                  [800, 188],
-                  [900, -40],
-                ]}
-              />
-              <BasisCurve
-                showPoints={false}
-                data={[
-                  [0, 160],
-                  [250, 10],
-                  [800, 184],
-                  [900, -50],
-                ]}
-              />
-            </svg> */}
           </div>
           <div className="home-banner__body">
             <div className="content">

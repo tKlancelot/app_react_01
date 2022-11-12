@@ -4,10 +4,10 @@ h1,h2{
     font-family: $font-alternative;
     font-size: 4.6vw;
     text-align: center;
-    text-shadow:-1px -1px 1px $write-overlay, 1px 1px 1px $black,0px -1px 2px $secondary;
     letter-spacing: 0.016rem;
     text-transform: capitalize;
     color: $secondary;
+    text-shadow:-1px -1px 1px $secondary, 1px 1px 1px $secondary,-1px 1px 1px $alternative;
 }
 
 h3,h4,h6{
@@ -28,19 +28,17 @@ h3,h4,h6{
 }
 
 h2{
-    letter-spacing: 0.072rem;
+    letter-spacing: 0.092rem;
     font-size: 3vw;
-    text-shadow: unset;
     text-align: start;
     text-transform: initial;
-
+    text-shadow:unset;
 }
 
 .project-card{
     &__body,.details__panel{
         h3{
             text-transform: uppercase;
-            // height: 2.4vw;
             display: flex;
             align-items: center;
         }

@@ -3,6 +3,7 @@
 @import 'utils/typography';
 @import 'utils/variables';
 @import 'utils/mixins';
+@import 'utils/splide-slide';
 // @import 'utils/animations';
 
 //base
@@ -27,7 +28,6 @@
 @import 'layouts/navbar';
 @import 'layouts/topbar';
 @import 'layouts/home-banner';
-@import 'layouts/profile';
 @import 'layouts/project-carousel';
 @import 'layouts/booklet';
 @import 'layouts/project-card';
@@ -35,3 +35,4 @@
 //pages
 
 @import 'pages/about';
+@import 'pages/contact';

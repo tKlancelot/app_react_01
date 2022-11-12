@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     .square-frame{
-        position: absolute;
+        position: relative;
         @include simple-shadow;
         z-index: 1;
     }

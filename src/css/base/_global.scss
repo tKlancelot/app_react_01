@@ -9,7 +9,7 @@ body {
     padding: 0;
 }
 
-img{
+img {
     image-rendering: -webkit-optimize-contrast;
 }
 
@@ -41,6 +41,13 @@ main {
     background-color: $primary;
 }
 
-.grise{
+.grise {
     filter: blur(1px);
+}
+
+.ornement {
+    position: absolute;
+    * {
+        stroke: $border-color;
+    }
 }

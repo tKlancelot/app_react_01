@@ -1,6 +1,6 @@
 a {
     text-decoration: none;
-    font-size: 0.76vw;
+    font-size: 0.80vw;
 }
 
 .navigation {
@@ -9,15 +9,15 @@ a {
             @include flex-center-center;
             text-align: center;
             width: 8vw;
-            height: 2.4vw;
+            height: 4.4vw;
             text-transform: capitalize;
             color: $primary;
-            border-radius: 4px;
+            // border-radius: 4px;
         }
 
         a.is-active {
-            background: linear-gradient(180deg, $secondary, $secondary-dark);
-            box-shadow: 1px 1px 0px inset #fff4, -1px -1px 0px inset #fff4, -4px -1px 1px $secondary-darkest, 4px 1px 1px $secondary-darkest;
+            background: linear-gradient(180deg, $secondary-medium, $secondary-medium);
+            // box-shadow: 1px 1px 0px inset #fff4, -1px -1px 0px inset #fff4, -4px -1px 1px $secondary-darkest, 4px 1px 1px $secondary-darkest;
         }
     }
 }
@@ -37,6 +37,15 @@ a {
         &:hover{
             border: 1px solid $secondary;
             background-color: transparent;
+            color:$primary;
+        }
+    }
+}
+
+.social-link{
+    a{
+        color:$write-overlay;
+        &:hover{
             color:$primary;
         }
     }

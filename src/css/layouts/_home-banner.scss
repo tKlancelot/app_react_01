@@ -1,5 +1,4 @@
-.home-banner,
-.contact {
+.home-banner{
     display: flex;
     height: 100%;
     overflow: hidden;
@@ -20,33 +19,7 @@
     }
 
     &__header {
-        svg {
-            position: absolute;
-        }
 
-        svg * {
-            stroke: $border-color;
-        }
     }
 }
 
-.contact {
-    &__body {
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        width: 32%;
-        margin:auto;
-        gap:$gap;
-        justify-content: center;
-        align-items: center;
-        .contact-form{
-            width: 100%;
-            form {
-                width: 100%;
-                display: grid;
-                gap: 1vw;
-            }
-        }
-    }
-}

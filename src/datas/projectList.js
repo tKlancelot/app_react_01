@@ -5,11 +5,11 @@ export const projectList = [
 		category: ['création theme wp', 'dvt theme wp'],
 		environment:'wordpress',
 		development:['vscode','locale','github'],
-		technos:['html','Sass','php','js'],
+		technos:['html5','Sass','php','js'],
 		librairies:['gsap','alpine.js'],
 		plugins:['contact form 7'],
 		permalink:'https://carmona-paris.fr/',
-		picture:'./images/screen-carmona.png',
+		picture:'./images/screen-carmona.webp',
 		id: '1ed'
 	},
 	{
@@ -35,7 +35,7 @@ export const projectList = [
 		librairies:['gsap','Three.js','alpine.js'],
 		plugins:['contact form 7','acp','all-in-one wp-migrate'],
 		permalink:"https://leviathan-pacifique.com/",
-		picture:'./images/screen-portfolio-classic-theme.png',
+		picture:'./images/screen-portfolio-classic-theme.webp',
 		id: '24c'
 	},
 	{
@@ -44,7 +44,7 @@ export const projectList = [
 		category: ['intégration twig', 'refactoring','dvt front-end'],
 		environment:'symfony 5.4.10',
 		development:['vscode','preprod','github','webpack'],
-		technos:['html5/twig','sass','php','js'],
+		technos:['html5','twig','sass','php','js'],
 		librairies:['gsap'],
 		plugins:[],
 		permalink:"https://www.medijob.fr/",
@@ -61,7 +61,7 @@ export const projectList = [
 		librairies:['gsap'],
 		plugins:['contact-form 7'],
 		permalink:"https://www.dostgrill.com/",
-		picture:'./images/screen-dostgrill.png',
+		picture:'./images/screen-dostgrill.webp',
 		id: '28e'
 	}
 ]

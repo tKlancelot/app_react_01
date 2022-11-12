@@ -18,24 +18,17 @@ const Projects = () => {
     </div>
   ))} */
 
-  // let state = {
-  //   projects: projectList,
-  //   radios:[
-  //     {id:1, value: "wordpress"},
-  //     {id:2, value: "react"},
-  //     {id:3, value: "symfony"}
-  //   ],
-  //   selectedRadio : 'wordpress'
-  // }
-
   const [state,setState] = useState({
     projects: projectList,
     radios:[
-      {id:1, value: "wordpress"},
-      {id:2, value: "react"},
-      {id:3, value: "symfony"}
+      {id:1, value: "html5"},
+      {id:2, value: "css3"},
+      {id:3, value: "sass"},
+      {id:3, value: "js"},
+      {id:3, value: "twig"},
+      {id:3, value: "php"}
     ],
-    selectedRadio : 'wordpress'
+    selectedRadio : 'html5'
   })
 
 
@@ -94,7 +87,7 @@ const Projects = () => {
           <div className="project-carousel__body">
 
             {projects && projects
-            .filter(item => item.environment.includes(selectedRadio))
+            .filter(item => item.technos.includes(selectedRadio))
             .map((projet, index) => (
               <ProjectCard 
                 key={index} 
