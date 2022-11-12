@@ -10,12 +10,12 @@
 
 ### Librairies React : 
 
-- [ ] React Draggable 
-- [ ] React svg Curve
-- [ ] React Splide 
-- [ ] Gsap React 
-- [ ] React Font awesome 
-- [ ] React external link
+* React Draggable 
+* React svg Curve
+* React Splide 
+* Gsap React 
+* React Font awesome 
+* React external link
 
 <img src="/public/screenshots/screen-one.png" width="384" height="216" />&emsp;&emsp;<img src="/public/screenshots/screen-two.png" width="384" height="216" />&emsp;&emsp;<img src="/public/screenshots/screen-three.png" width="384" height="216" />
  
