@@ -8,7 +8,7 @@
 * animation 3d
 * présentation d'objet 3d + objets 3d téléchargeables
 
-### Librairies React : 
+### Librairies React
 
 * React Draggable 
 * React svg Curve
@@ -16,6 +16,8 @@
 * Gsap React 
 * React Font awesome 
 * React external link
+
+### Médias
 
 <img src="/public/screenshots/screen-one.png" width="384" height="216" />&emsp;&emsp;<img src="/public/screenshots/screen-two.png" width="384" height="216" />&emsp;&emsp;<img src="/public/screenshots/screen-three.png" width="384" height="216" />
  
