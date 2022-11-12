@@ -7,8 +7,8 @@
     grid-template-rows: auto 1fr;
     min-height: 40vw;
     &__header{
-        background-color: $secondary-darkest;
-        border-bottom: 1px solid $dark-border;
+        background-color: $secondary-medium;
+        border-bottom: 1px solid $border-color;
         z-index: 1;
         color:$write-overlay;
     }

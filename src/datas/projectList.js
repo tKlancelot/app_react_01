@@ -35,7 +35,7 @@ export const projectList = [
 		librairies:['gsap','Three.js','alpine.js'],
 		plugins:['contact form 7','acp','all-in-one wp-migrate'],
 		permalink:"https://leviathan-pacifique.com/",
-		picture:'./images/screen-portfolio-classic-theme.webp',
+		picture:'./images/screen-portfolio-classic-theme.png',
 		id: '24c'
 	},
 	{
@@ -49,7 +49,7 @@ export const projectList = [
 		plugins:[],
 		permalink:"https://www.medijob.fr/",
 		picture:'./images/screen-medijob.png',
-		id: '24c'
+		id: '6be'
 	},
 	{
 		name: 'dostgrill',
@@ -63,5 +63,18 @@ export const projectList = [
 		permalink:"https://www.dostgrill.com/",
 		picture:'./images/screen-dostgrill.webp',
 		id: '28e'
+	},
+	{
+		name: 'scavolini landing page',
+		description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid doloribus nam iure alias eveniet iusto libero fugiat soluta quibusdam at delectus ut distinctio aut asperiores, tenetur dolor nisi optio beatae.',
+		category: ['low-code', 'refactoring'],
+		environment:'wordpress',
+		development:['vscode','preprod'],
+		technos:['html5','css3','js'],
+		librairies:['gsap'],
+		plugins:['contact-form 7'],
+		permalink:"https://parisoperation-scavolinistore.net/",
+		picture:'./images/screen-scavolini.png',
+		id: 'd78'
 	}
 ]

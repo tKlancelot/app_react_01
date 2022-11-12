@@ -55,7 +55,7 @@ label {
                     border-radius: 24%;
                     transform: scale(0);
                     transition: 0.24s ease-in;
-                    background-color: $secondary;
+                    background-color: $secondary-light;
                 }
 
                 input[type="radio"]:checked::before {
@@ -63,7 +63,7 @@ label {
                 }
 
                 input[type="radio"]:focus {
-                    outline: 2px solid $secondary-medium;
+                    outline: 2px solid $secondary;
                     outline-offset: 0rem;
                 }
             }

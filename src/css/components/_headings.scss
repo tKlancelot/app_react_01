@@ -7,7 +7,8 @@ h1,h2{
     letter-spacing: 0.016rem;
     text-transform: capitalize;
     color: $secondary;
-    text-shadow:-1px -1px 1px $secondary, 1px 1px 1px $secondary,-1px 1px 1px $alternative;
+    text-shadow:-1px -1px 1px $secondary-light,0px -1px 1px $secondary-lightest
+    // 0px 0px 1px $alternative;
 }
 
 h3,h4,h6{
@@ -29,10 +30,10 @@ h3,h4,h6{
 
 h2{
     letter-spacing: 0.092rem;
-    font-size: 3vw;
+    font-size: 2.4vw;
     text-align: start;
-    text-transform: initial;
-    text-shadow:unset;
+    text-transform: uppercase;
+    // text-shadow:unset;
 }
 
 .project-card{
@@ -41,6 +42,7 @@ h2{
             text-transform: uppercase;
             display: flex;
             align-items: center;
+            font-size: 0.88vw;
         }
     }
 }

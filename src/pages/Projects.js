@@ -77,7 +77,7 @@ const Projects = () => {
                       id={radio.value}
                       onChange={handleRadio}
                     />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                     <label htmlFor={radio.value}>{radio.value}</label>
                   </li>
                 )

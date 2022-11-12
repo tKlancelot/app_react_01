@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import Draggable from 'react-draggable'; // The default
+import {DraggableCore} from 'react-draggable'; // <DraggableCore>
 
 const ProjectCard = (props) => {
 
@@ -14,14 +17,14 @@ const ProjectCard = (props) => {
         })
     }
 
-    let {index,name,environment,category,development,technos,librairies,plugins,permalink,picture} = props;
+    let {index,name,description,environment,category,development,technos,librairies,plugins,permalink,picture} = props;
 
     return (
         <div>
             <div className="project-card" key={index}>
                 <div className="project-card__header">
                     {/* <img src={picture}/> */}
-                    {picture ? <img src={picture} alt={name}/> : <img src='./images/default-background.jpg' alt="par défaut"/> }
+                    {picture ? <img src={picture} alt={name} onClick = {handleInfo}/> : <img onClick = {handleInfo} src='./images/default-background.jpg' alt="par défaut"/> }
                     
                 </div>
                 <div className="project-card__body">
@@ -32,73 +35,94 @@ const ProjectCard = (props) => {
                 </div>
                 {/* <p>Description : {description}</p> */}
                 {(state.showInfo === true) &&
+                    <Draggable handle=".handle">
                     <div className="details__panel">
                         <div className="details__panel__frame">
-                            <div className="details__panel__frame__header">
+                            <div className="details__panel__frame__header handle">
                                 <h3>{name}</h3>
                                 <button onClick = {handleInfo} >
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5l5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6Z"/></svg>
                                 </button>
                             </div>
                             <div className="details__panel__frame__body">
-                                <table className='details'>
-                                    <tbody>
-                                        <tr>
-                                        <td>environnement</td>
-                                        <td>{environment}</td>
-                                        </tr>
-                                        <tr>
-                                        <td>catégories</td>
-                                        <td>
-                                            {category.map((cat,index) => (
-                                            <span key={index}>
-                                                <span>{cat}, </span>
-                                            </span>  
-                                            ))}
-                                        </td>
-                                        </tr>
-                                        <tr>
-                                        <td>développement</td>
-                                        <td>
-                                            {development.map((env,index) => (
-                                            <span key={index}>
-                                                <span>{env}, </span>
-                                            </span>  
-                                            ))}
-                                        </td>
-                                        </tr>
-                                        <tr>
-                                        <td>technos</td>
-                                        <td>
-                                            {technos.map((tech,index) => (
-                                            <span key={index}>
-                                                <span>{tech}, </span>
-                                            </span>  
-                                            ))}
-                                        </td>
-                                        </tr>
-                                        <tr>
-                                        <td>librairies</td>
-                                        <td>
-                                            {librairies.map((lib,index) => (
-                                            <span key={index}>
-                                                <span>{lib}, </span>
-                                            </span>  
-                                            ))}
-                                        </td>
-                                        </tr>
-                                        <tr>
-                                        <td>plugins</td>
-                                        <td>
-                                            {plugins.map((plugin,index) => (
-                                            <span key={index}>
-                                                <span>{plugin}, </span>
-                                            </span>  
-                                            ))}
-                                        </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <Splide 
+                                    aria-label="details panel body"
+                                    options={{
+                                        type:'loop',
+                                        rewind: true,
+                                        width : '30vw',
+                                        gap   : '2vw',
+                                        perPage:1,
+                                        arrows:true,
+                                        pagination:false
+                                    }}
+                                >
+                                    <SplideSlide>
+                                        <table className='details'>
+                                            <tbody>
+                                                <tr>
+                                                <td>environnement</td>
+                                                <td>{environment}</td>
+                                                </tr>
+                                                <tr>
+                                                <td>catégories</td>
+                                                <td>
+                                                    {category.map((cat,index) => (
+                                                    <span key={index}>
+                                                        <span>{cat}, </span>
+                                                    </span>  
+                                                    ))}
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>développement</td>
+                                                <td>
+                                                    {development.map((env,index) => (
+                                                    <span key={index}>
+                                                        <span>{env}, </span>
+                                                    </span>  
+                                                    ))}
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>technos</td>
+                                                <td>
+                                                    {technos.map((tech,index) => (
+                                                    <span key={index}>
+                                                        <span>{tech}, </span>
+                                                    </span>  
+                                                    ))}
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>librairies</td>
+                                                <td>
+                                                    {librairies.map((lib,index) => (
+                                                    <span key={index}>
+                                                        <span>{lib}, </span>
+                                                    </span>  
+                                                    ))}
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                <td>plugins</td>
+                                                <td>
+                                                    {plugins.map((plugin,index) => (
+                                                    <span key={index}>
+                                                        <span>{plugin}, </span>
+                                                    </span>  
+                                                    ))}
+                                                </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </SplideSlide>
+                                    <SplideSlide>
+                                        <div className='description-frame'>
+                                            <p>{description}</p>
+                                        </div>
+                                    </SplideSlide>
+                                </Splide>
                             </div>
                             <div className="details__panel__frame__footer">
                                 <a href={permalink} target="_blank" rel="noopener noreferrer">visiter</a>
@@ -106,6 +130,7 @@ const ProjectCard = (props) => {
                             </div>
                         </div>
                     </div>
+                    </Draggable>
                 }
             </div>
         </div>

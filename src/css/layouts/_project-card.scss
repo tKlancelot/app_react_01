@@ -5,7 +5,6 @@
     gap: 1vw;
     padding: 1vw;
     height: 100%;
-    
     &__header {
         display: flex;
         img {
@@ -14,6 +13,7 @@
             object-fit: cover;
             object-position: top;
             border-radius: 6px;
+            cursor: pointer;
         }
     }
 
@@ -35,26 +35,53 @@
     width: 100%;
     place-items: center;
     flex-direction: column;
-
     &__frame {
-        border-radius: 6px;
+
         box-shadow: 
-        -1px -1px 1px 0px $secondary-dark,1px 1px 1px 0px $secondary-dark,
-        -2px -2px 2px 0px $secondary-dark,2px 2px 2px 0px $secondary-dark;
+        -1px -1px 1px 0px $secondary-medium,1px 1px 1px 0px $secondary-medium;
         background-color: $secondary-medium;
         border: 1px solid $secondary;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
         justify-content: space-evenly;
-        gap: $gap;
-        padding: $gap;
-
+        border-radius: 6px;
         &__header {
             width: 100%;
             display: flex;
             justify-content: space-between;
+            padding: 0.5vw;
+            background-color: $secondary-dark;
+            border-bottom: 1px solid $border-color;
+            border-radius: 6px 6px 0px 0px;
+            cursor:grab;
+        }
 
+        &__body{
+            padding:3.2vw 3.2vw 0vw;
+            .splide__arrow{
+                background-color: unset;
+                svg{
+                    fill:$write-overlay;
+                    width: 1.4em;
+                    height: 1.4em;
+                }
+            }
+            .splide__arrow--prev{
+                left:-2.4vw;
+            }
+            .splide__arrow--next{
+                right:-2.4vw;
+            }
+            .description-frame{
+                p{
+                    line-height: 1.4vw;
+                }
+            }
+        }
+
+        &__footer{
+            padding:2vw 3.2vw 3.2vw;
         }
     }
 

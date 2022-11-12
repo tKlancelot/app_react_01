@@ -17,8 +17,16 @@ const Contact = () => {
                     <Square top="25%" left="72%" width="40vw" height="40vw" radius="32%" rotation="-10deg"/>
                 </div>
                 <div className="contact__body">
-                    <h2>Let's get in touch !</h2>
-                    <ContactForm/>
+                    <div className="contact__body__left">
+                        <h2>Let's get in touch !</h2>
+                        <ContactForm/>
+                    </div>
+                    <div className="contact__body__right">
+                        <div className="picture-frame">
+                            objet 3d
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

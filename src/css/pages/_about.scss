@@ -21,7 +21,8 @@
                 width: 24vw;
                 border-radius: 32%;
                 position: relative;
-                @include border-thema;
+                border: 1px solid $border-color;
+                background-color: $outline;
                 z-index: 4;
 
                 img {
@@ -38,10 +39,11 @@
 
         &__right {
             display: grid;
-            @include border-thema;
             z-index: 2;
             position: relative;
             padding: 4vw;
+            background-color: $outline;
+            border-left: 1px solid $border-color;
             .content-frame {
                 display: flex;
                 justify-content: space-evenly;
@@ -56,8 +58,8 @@
 
                 svg {
                     fill: $write-overlay;
-                    width: 1vw;
-                    height: 1vw;
+                    width: 1.2vw;
+                    height: 1.2vw;
                     margin: auto $gap auto 0;
                     cursor: pointer;
                     @include item-transition;

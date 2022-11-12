@@ -1,6 +1,7 @@
 .navigation {
     &__body {
-        @include section-border;
+        // @include section-border;
+        border-bottom: 1px solid $border-color;
         @include section-linear;
         @include flex-center;
         justify-content: space-between;
@@ -10,6 +11,7 @@
                 margin: auto 1vw;;
                 height: 2.4vw;
                 width: 100%;
+                cursor: pointer;
             }
         }
         ul {
