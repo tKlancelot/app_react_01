@@ -34,20 +34,38 @@ a {
         width: 6.4vw;
         height: 2.4vw;
         padding: 0.5vw;
-        &:hover{
+
+        &:hover {
             border: 1px solid $secondary;
             background-color: transparent;
-            color:$primary;
+            color: $primary;
         }
     }
 }
 
-.social-link{
-    a{
-        
-        color:$write-overlay;
-        &:hover{
-            color:$primary;
+.social-link {
+    a {
+
+        color: $write-overlay;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.contact {
+    &__body{
+        .infos-frame{
+            a {
+                color: $write-overlay;
+                font-size: 0.76vw;
+
+                &:hover {
+                    // color: #ccb16a;
+                    color: $secondary-lightest;
+                }
+            }
         }
     }
 }

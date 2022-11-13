@@ -1,5 +1,5 @@
 import React from 'react';
-import { BasisCurve } from "react-svg-curve";
+// import { BasisCurve } from "react-svg-curve";
 
 const ExpertiseCard = (props) => {
     return (
