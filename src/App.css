@@ -498,7 +498,7 @@ h1, h2 {
   letter-spacing: 0.016rem;
   text-transform: capitalize;
   color: #3b1a79;
-  text-shadow: -1px -1px 1px #5933a1, 0px -1px 1px #6f49b8;
+  text-shadow: -1px -1px 1px #6f49b8, 0px -1px 1px #6f49b8;
 }
 
 h3, h4, h6 {

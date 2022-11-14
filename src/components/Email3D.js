@@ -5,19 +5,21 @@ import { useFrame } from "@react-three/fiber";
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-export default function Model(props) {
+
+export default function Email3D(props) {
   const { nodes, materials } = useGLTF("gltf/email.gltf");
 
   const boxRef = useRef();
 
   useFrame(() => {
     boxRef.current.rotation.y += 0.00750;
+
   });
 
 
   return (
     <group ref={boxRef} {...props} dispose={null}>
-      <group position={[0, 1.62, -0.02]} rotation={[-1.71, 1.57, 0]}>
+     <group position={[0, 1.62, -0.02]} rotation={[-1.71, 1.57, 0]}>
         <mesh
           castShadow
           receiveShadow
@@ -38,11 +40,9 @@ export default function Model(props) {
         material={materials.GOLD}
         position={[-0.57, 1.37, 0.11]}
         rotation={[1.43, 0, 0]}
-        scale={1.16}
-        
+        scale={1.09}
       />
       <mesh
-
         castShadow
         receiveShadow
         geometry={nodes.Cylinder001.geometry}
@@ -55,7 +55,7 @@ export default function Model(props) {
         castShadow
         receiveShadow
         geometry={nodes.Cylinder004.geometry}
-        material={materials["Material.004"]}
+        material={materials["Material.006"]}
         position={[0.8, 0.2, 0]}
         scale={[0.1, 0.03, 0.1]}
       />
@@ -63,7 +63,7 @@ export default function Model(props) {
         castShadow
         receiveShadow
         geometry={nodes.Cylinder002.geometry}
-        material={materials["Material.004"]}
+        material={materials["Material.006"]}
         position={[-0.8, 0.2, 0]}
         scale={[0.1, 0.03, 0.1]}
       />
@@ -71,7 +71,7 @@ export default function Model(props) {
         castShadow
         receiveShadow
         geometry={nodes.Cylinder003.geometry}
-        material={materials["Material.004"]}
+        material={materials["Material.006"]}
         position={[0, 0.2, 0.8]}
         rotation={[0, -Math.PI / 2, 0]}
         scale={[0.1, 0.03, 0.1]}
@@ -80,7 +80,7 @@ export default function Model(props) {
         castShadow
         receiveShadow
         geometry={nodes.Cylinder005.geometry}
-        material={materials["Material.004"]}
+        material={materials["Material.006"]}
         position={[0, 0.2, -0.8]}
         rotation={[0, -Math.PI / 2, 0]}
         scale={[0.1, 0.03, 0.1]}
@@ -89,4 +89,7 @@ export default function Model(props) {
   );
 }
 
+
+
 useGLTF.preload("/email.gltf");
+
