@@ -1,8 +1,8 @@
 import { React, useRef, useLayoutEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import Square from "../components/Square";
 import gsap from "gsap";
+// import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 
 const Home = () => {
   // const n = 48;
@@ -11,7 +11,6 @@ const Home = () => {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // var tl = gsap.timeline({repeat: -1, repeatDelay: 1,yoyo:true});
 
       gsap.from(".home-banner__body h1", {
         opacity: 0,
@@ -47,40 +46,10 @@ const Home = () => {
       <Navigation />
       <main>
         <div className="home-banner">
+          {/* <BrowserView> */}
           <div className="home-banner__header">
-            <Square
-              top="-8%"
-              left="-14%"
-              width="56vw"
-              height="56vw"
-              radius="24% 24% 0%"
-              rotation="8deg"
-            />
-            <Square
-              top="-16%"
-              left="60%"
-              width="50vw"
-              height="50vw"
-              radius="32%"
-              rotation="-2deg"
-            />
-            <Square
-              top="25%"
-              left="72%"
-              width="40vw"
-              height="40vw"
-              radius="32%"
-              rotation="-24deg"
-            />
-            <Square
-              top="20%"
-              left="-10%"
-              width="36vw"
-              height="36vw"
-              radius="0% 36%"
-              rotation="12deg"
-            />
           </div>
+          {/* </BrowserView> */}
           <div className="home-banner__body">
             <div className="content">
               <h1>

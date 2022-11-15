@@ -1,4 +1,6 @@
 import React from "react";
+import $ from "jquery";
+
 
 const Logo = () => {
 
@@ -62,11 +64,17 @@ const Logo = () => {
         document.body.appendChild(particle);
     }
 
+    const handleMenuMobile = () => {
+      if(window.matchMedia('(max-width: 800px)').matches){
+          $('.navigation__body__right').toggle(250);
+      }
+    }
+
 
 
   return (
     <React.Fragment>
-      <div className="logotype">
+      <div className="logotype" onClick={handleMenuMobile}>
         {/* <img src="./logo-portfolio-react.svg" alt="logotype portfolio react" /> */}
         <svg width="78" height="80" viewBox="0 0 78 80" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={pop}>
           <path

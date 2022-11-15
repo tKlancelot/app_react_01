@@ -135,3 +135,29 @@ label {
         }
     }
 }
+
+@media screen and (max-width:800px){
+
+    .project-carousel{
+        &__header{
+            ul{
+                li{
+                    input[type="radio"]::before,
+                    input[type="radio"] {
+                        width: 2.6vw;
+                        height: 2.6vw;
+                    }
+
+                    input[type="radio"]:focus {
+                        outline: 2px solid $secondary;
+                        outline-offset: 0rem;
+                    }
+                    label{
+                        font-size: 3vw;
+                    }
+                }
+            }
+        }
+    }
+
+}

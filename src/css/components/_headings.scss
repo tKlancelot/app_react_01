@@ -46,3 +46,20 @@ h2{
         }
     }
 }
+
+@media screen and (max-width:800px){
+    .home-banner{
+        h1{
+            font-size:12.6vw;
+            letter-spacing:0.16rem;
+        }
+    }
+    .project-card{
+        .details__panel,
+        &__body{
+            h3{
+                font-size: 3vw;
+            }
+        }
+    }
+}

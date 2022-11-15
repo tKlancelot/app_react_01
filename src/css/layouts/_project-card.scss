@@ -5,8 +5,10 @@
     gap: 1vw;
     padding: 1vw;
     height: 100%;
+
     &__header {
         display: flex;
+
         img {
             width: 100%;
             height: 12vw;
@@ -35,10 +37,10 @@
     width: 100%;
     place-items: center;
     flex-direction: column;
+
     &__frame {
 
-        box-shadow: 
-        -1px -1px 1px 0px $secondary-medium,1px 1px 1px 0px $secondary-medium;
+        box-shadow:-1px -1px 1px 0px $secondary-medium, 1px 1px 1px 0px $secondary-medium;
         background-color: $secondary-medium;
         border: 1px solid $secondary;
         display: flex;
@@ -46,6 +48,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         border-radius: 6px;
+
         &__header {
             width: 100%;
             display: flex;
@@ -54,34 +57,39 @@
             background-color: $secondary-dark;
             border-bottom: 1px solid $border-color;
             border-radius: 6px 6px 0px 0px;
-            cursor:grab;
+            cursor: grab;
         }
 
-        &__body{
-            padding:3.2vw 3.2vw 0vw;
-            .splide__arrow{
+        &__body {
+            padding: 3.2vw 3.2vw 0vw;
+
+            .splide__arrow {
                 background-color: unset;
-                svg{
-                    fill:$write-overlay;
+
+                svg {
+                    fill: $write-overlay;
                     width: 1.4em;
                     height: 1.4em;
                 }
             }
-            .splide__arrow--prev{
-                left:-2.4vw;
+
+            .splide__arrow--prev {
+                left: -2.4vw;
             }
-            .splide__arrow--next{
-                right:-2.4vw;
+
+            .splide__arrow--next {
+                right: -2.4vw;
             }
-            .description-frame{
-                p{
+
+            .description-frame {
+                p {
                     line-height: 1.4vw;
                 }
             }
         }
 
-        &__footer{
-            padding:2vw 3.2vw 3.2vw;
+        &__footer {
+            padding: 2vw 3.2vw 3.2vw;
         }
     }
 
@@ -89,4 +97,49 @@
         margin: auto;
         justify-content: center;
     }
+}
+
+@media screen and (max-width:800px) {
+
+
+
+    .details__panel__frame {
+        width: 92%;
+        &__body {
+            padding: 4.8vw 3.2vw;
+            .description-frame {
+                p {
+                    line-height: 2.8vw;
+                }
+            }
+        }
+
+        &__header {
+            padding:2vw;
+            background-color: $secondary-medium;
+        }
+
+        &__footer{
+            padding: 0vw 3.2vw 4.8vw;
+        }
+    }
+
+
+    .project-card {
+        padding: 0vw;
+        gap: 0rem;
+
+        &__header {
+            padding: 2vw;
+
+            img {
+                height: 40vw;
+            }
+        }
+
+        &__body {
+            padding: 0 2vw 2vw;
+        }
+    }
+
 }

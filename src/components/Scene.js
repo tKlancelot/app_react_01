@@ -11,8 +11,8 @@ export default function App() {
     
 
     return (
-        <div style={{ width: "28vw", height: "28vw" }}>
-        <Canvas camera={{position: [1, 4, 5], fov: 44}} flat>
+        <div>
+        <Canvas camera={{position: [-2, 4, 5], fov: 44}} flat>
             <CameraController />
             <Suspense fallback={null}>
                 <ambientLight intensity={0.72} />

@@ -6,7 +6,7 @@ export default function Phone3D(props) {
   return (
     <group {...props} dispose={null}>
       <group
-        position={[0, 1.01, 0]}
+        position={[0, 0, 0]}
         rotation={[Math.PI / 2, -Math.PI / 2, 0]}
         scale={[1, 1.16, 1]}
       >

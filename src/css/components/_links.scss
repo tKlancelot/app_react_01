@@ -17,7 +17,6 @@ a {
 
         a.is-active {
             background: linear-gradient(180deg, $secondary-medium, $secondary-medium);
-            // box-shadow: 1px 1px 0px inset #fff4, -1px -1px 0px inset #fff4, -4px -1px 1px $secondary-darkest, 4px 1px 1px $secondary-darkest;
         }
     }
 }
@@ -55,17 +54,58 @@ a {
 }
 
 .contact {
-    &__body{
-        .infos-frame{
+    &__body {
+        .infos-frame {
             a {
                 color: $write-overlay;
                 font-size: 0.76vw;
 
                 &:hover {
-                    // color: #ccb16a;
                     color: $secondary-lightest;
                 }
             }
         }
     }
+}
+
+@media screen and (max-width:1600px) {
+
+    .navigation {
+        &__body {
+            a {
+                height: 6vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .contact__body .infos-frame a,
+    a {
+        font-size: 2.6vw;
+    }
+
+    .details__panel__frame__footer a {
+        width: 16vw;
+        padding: 3.2vw;
+    }
+
+
+    .navigation {
+        a {
+            height: 16vw;
+            width: 100%;
+        }
+    }
+
+    .navigation {
+        ul {
+            li {
+                font-size: 4.2vw;
+                color: #f2f2f292;
+            }
+        }
+    }
+
 }

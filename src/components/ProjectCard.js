@@ -54,7 +54,14 @@ const ProjectCard = (props) => {
                                         gap   : '2vw',
                                         perPage:1,
                                         arrows:true,
-                                        pagination:false
+                                        pagination:false,
+                                        breakpoints: {
+                                            780: {
+                                                // perPage: 2,
+                                                gap   : '0vw',
+                                                width : '82vw',
+                                            }
+                                        }
                                     }}
                                 >
                                     <SplideSlide>

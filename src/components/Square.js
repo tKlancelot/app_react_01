@@ -12,22 +12,22 @@ const Square = (props) => {
 
             // on pourrait aussi passer des props ici 
         
-            var tl = gsap.timeline({repeat: -1, repeatDelay: 1, yoyo:true});
+            // var tl = gsap.timeline({repeat: -1, repeatDelay: 1, yoyo:true});
 
-            tl.from(".square-frame", {
-                x:"random([-40, 0, 5])",
-                y:"random([0, 40, 5])",
-                rotation:"random([-8, 8, 1])",
-                duration:6,
-                ease:'Power2.easeOut',
-            }).to(".square-frame",{
-                x:"random([-40, 0, 5])",
-                y:"random([0, 40, 5])",
-                rotation:"random([-10, 10, 1])",
-                duration:6,
-                scale:0.96,
-                ease:"Power2.easeIn",
-            });
+            // tl.from(".square-frame", {
+            //     x:"random([-40, 0, 5])",
+            //     y:"random([0, 40, 5])",
+            //     rotation:"random([-8, 8, 1])",
+            //     duration:6,
+            //     ease:'Power2.easeOut',
+            // }).to(".square-frame",{
+            //     x:"random([-40, 0, 5])",
+            //     y:"random([0, 40, 5])",
+            //     rotation:"random([-10, 10, 1])",
+            //     duration:6,
+            //     scale:0.96,
+            //     ease:"Power2.easeIn",
+            // });
 
 
     }, comp);
@@ -39,10 +39,12 @@ const Square = (props) => {
 
     return (
         <div ref={comp} className="square">
-            <div className="square-frame" 
+            <div className={props.type}
                 style={{
-                    marginTop:props.top,
+                    top:props.top,
+                    bottom:props.bottom,
                     left:props.left,
+                    right:props.right,
                     width:props.width,
                     height:props.height,
                     borderRadius:props.radius,

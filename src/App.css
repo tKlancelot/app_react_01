@@ -18,6 +18,30 @@
   src: url("/src/assets/fonts/Inter/static/Inter-Light.ttf") format("truetype");
   font-display: swap;
 }
+@keyframes rotateR {
+  from {
+    transform: translateY(0px) rotate(0);
+  }
+  to {
+    transform: translateY(15px) rotate(45deg);
+  }
+}
+@keyframes rotateL {
+  from {
+    transform: translateY(0px) rotate(0);
+  }
+  to {
+    transform: translateY(-15px) rotate(-45deg);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .splide__container {
   box-sizing: border-box;
   position: relative;
@@ -485,12 +509,44 @@ a {
   color: #6f49b8;
 }
 
-ul,
+@media screen and (max-width: 1600px) {
+  .navigation__body a {
+    height: 6vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact__body .infos-frame a,
+  a {
+    font-size: 2.6vw;
+  }
+  .details__panel__frame__footer a {
+    width: 16vw;
+    padding: 3.2vw;
+  }
+  .navigation a {
+    height: 16vw;
+    width: 100%;
+  }
+  .navigation ul li {
+    font-size: 4.2vw;
+    color: rgba(242, 242, 242, 0.5725490196);
+  }
+}
 ul li {
   list-style-type: none;
   font-size: 0.84vw;
 }
 
+@media screen and (max-width: 1600px) {
+  ul li {
+    font-size: 0.92vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  ul li {
+    font-size: 2.8vw;
+  }
+}
 h1, h2 {
   font-family: "GT Walsheim";
   font-size: 4.6vw;
@@ -528,17 +584,36 @@ h2 {
   font-size: 0.88vw;
 }
 
+@media screen and (max-width: 800px) {
+  .home-banner h1 {
+    font-size: 12.6vw;
+    letter-spacing: 0.16rem;
+  }
+  .project-card .details__panel h3, .project-card__body h3 {
+    font-size: 3vw;
+  }
+}
 .square {
   position: absolute;
   width: 100%;
+  height: 100%;
+  top: 0;
   display: flex;
 }
 .square .square-frame {
-  position: relative;
+  position: absolute;
   background: rgba(35, 8, 85, 0.2823529412);
   border: 1px solid rgba(55, 21, 117, 0.4470588235);
   outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
   z-index: 1;
+}
+.square .large {
+  min-width: 40vw;
+  min-height: 40vw;
+}
+.square .medium {
+  min-width: 28vw;
+  min-height: 28vw;
 }
 
 button {
@@ -584,6 +659,43 @@ button {
   transform: scale(1.2);
 }
 
+.navigation__body .cross-frame {
+  position: absolute;
+  z-index: 9;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  height: 12vw;
+  background: unset;
+  border: unset;
+}
+.navigation__body .cross-frame .cross {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.navigation__body .cross-frame .cross .bar {
+  width: 24px;
+  height: 2px;
+  background-color: #f2f2f2;
+}
+.navigation__body .cross-frame .cross .bar:nth-of-type(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.navigation__body .cross-frame .cross .bar:nth-of-type(2) {
+  transform: translateY(-4.8px) rotate(-45deg);
+}
+
+@media screen and (max-width: 800px) {
+  button {
+    font-size: 2.6vw;
+  }
+  .home-banner button {
+    width: 24vw;
+    height: 24vw;
+  }
+}
 p {
   color: rgba(242, 242, 242, 0.6431372549);
   font-size: 0.8vw;
@@ -602,6 +714,19 @@ span {
   line-height: 1.8vw;
 }
 
+@media screen and (max-width: 1600px) {
+  .footer__body p {
+    font-size: 0.92vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 2.6vw;
+  }
+  .footer__body p {
+    font-size: 2.6vw;
+  }
+}
 table,
 tr,
 td {
@@ -631,6 +756,22 @@ tr:nth-child(even) {
   background-color: rgba(55, 21, 117, 0.4470588235);
 }
 
+@media screen and (max-width: 800px) {
+  table,
+  tr,
+  td {
+    font-size: 2vw;
+  }
+  table tbody td:nth-child(1) {
+    width: 30vw;
+  }
+  table tbody td:nth-child(2) {
+    width: 60vw;
+  }
+  tr:nth-child(even) {
+    background-color: unset;
+  }
+}
 input,
 label {
   font-size: 0.76vw;
@@ -743,6 +884,20 @@ label {
   min-height: 8vw;
 }
 
+@media screen and (max-width: 800px) {
+  .project-carousel__header ul li input[type=radio]::before,
+  .project-carousel__header ul li input[type=radio] {
+    width: 2.6vw;
+    height: 2.6vw;
+  }
+  .project-carousel__header ul li input[type=radio]:focus {
+    outline: 2px solid #3b1a79;
+    outline-offset: 0rem;
+  }
+  .project-carousel__header ul li label {
+    font-size: 3vw;
+  }
+}
 particle {
   border-radius: 50%;
   left: 0;
@@ -763,6 +918,17 @@ particle {
   height: 2.8vw;
 }
 
+@media screen and (max-width: 1600px) {
+  .footer__body {
+    height: 6vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footer__body {
+    height: 20vw;
+    background: #230c4e;
+  }
+}
 .navigation__body {
   border-bottom: 1px solid rgba(55, 21, 117, 0.4470588235);
   background: linear-gradient(90deg, #090118, #18063b, #090118);
@@ -783,7 +949,50 @@ particle {
   display: flex;
   margin: auto 4vw;
 }
+.navigation__body__right {
+  display: flex;
+}
+.navigation__body__right .cross-frame {
+  display: none;
+}
 
+@media screen and (max-width: 800px) {
+  .navigation__body {
+    flex-direction: column;
+    background: #230c4e;
+  }
+  .navigation__body .logotype {
+    height: 12vw;
+  }
+  .navigation__body .logotype svg {
+    height: 8vw;
+  }
+  .navigation__body__right {
+    background: linear-gradient(180deg, #0e0324, #18063b);
+    display: none;
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+  }
+  .navigation__body__right ul {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .navigation__body__right .cross-frame {
+    display: flex;
+  }
+  .navigation__body.navbar-fixed {
+    position: fixed;
+    z-index: 16;
+    width: 100%;
+  }
+}
 .navigation__header {
   background-color: #161616;
   display: flex;
@@ -828,6 +1037,12 @@ particle {
   flex-direction: column;
   gap: 4vw;
 }
+
+@media screen and (max-width: 800px) {
+  .home-banner__body .content {
+    gap: 8vw;
+  }
+}
 .project-carousel {
   display: grid;
   height: 100%;
@@ -858,6 +1073,29 @@ particle {
   z-index: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .project-carousel {
+    overflow: auto;
+  }
+  .project-carousel__body {
+    grid-template-columns: 1fr;
+    place-content: flex-start;
+    padding: 6vw 6vw;
+    grid-gap: 6vw;
+  }
+  .project-carousel__header ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+  }
+  .project-carousel__header ul li {
+    height: 10vw;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0% 20%;
+  }
+}
 .booklet {
   background: linear-gradient(180deg, #0e0324, #18063b);
   display: flex;
@@ -978,6 +1216,37 @@ particle {
   justify-content: center;
 }
 
+@media screen and (max-width: 800px) {
+  .details__panel__frame {
+    width: 92%;
+  }
+  .details__panel__frame__body {
+    padding: 4.8vw 3.2vw;
+  }
+  .details__panel__frame__body .description-frame p {
+    line-height: 2.8vw;
+  }
+  .details__panel__frame__header {
+    padding: 2vw;
+    background-color: #230c4e;
+  }
+  .details__panel__frame__footer {
+    padding: 0vw 3.2vw 4.8vw;
+  }
+  .project-card {
+    padding: 0vw;
+    gap: 0rem;
+  }
+  .project-card__header {
+    padding: 2vw;
+  }
+  .project-card__header img {
+    height: 40vw;
+  }
+  .project-card__body {
+    padding: 0 2vw 2vw;
+  }
+}
 .profile {
   display: flex;
   height: 100%;
@@ -1079,22 +1348,26 @@ particle {
   align-items: center;
   justify-content: center;
 }
-.contact__body__frame .infos-frame {
+.contact__body__frame .picture-frame > div {
+  width: 32vw;
+  height: 32vw;
+}
+.contact__body .infos-frame {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
 }
-.contact__body__frame h2 {
+.contact__body h2 {
   margin: auto auto 0;
   width: 50%;
 }
-.contact__body__frame .contact-form {
+.contact__body .contact-form {
   width: 40%;
   margin: -2vw auto auto;
 }
-.contact__body__frame .contact-form form {
+.contact__body .contact-form form {
   width: 100%;
   display: grid;
   gap: 1vw;
@@ -1103,6 +1376,13 @@ particle {
 .map {
   height: 50vh;
   width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .contact__body__frame .picture-frame > div {
+    width: 72vw;
+    height: 72vw;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

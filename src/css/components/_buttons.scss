@@ -1,4 +1,4 @@
-button{
+button {
     cursor: pointer;
     font-size: 0.78vw;
 }
@@ -20,26 +20,81 @@ button{
 }
 
 .project-card__body,
-.details__panel__frame__header{
-        button{
+.details__panel__frame__header {
+    button {
+        display: flex;
+        background: unset;
+        border: unset;
+
+        svg {
             display: flex;
-            background:unset;
-            border:unset;
-            svg{
-                display: flex;
-                align-items: center;
-                path{
-                    fill:$write-overlay;
-                    transform-origin: center;
-                    @include item-transition;
+            align-items: center;
+
+            path {
+                fill: $write-overlay;
+                transform-origin: center;
+                @include item-transition;
+            }
+
+            &:hover {
+                path {
+                    fill: $primary;
+                    transform: scale(1.2);
                 }
-                &:hover{
-                    path{
-                        fill: $primary;
-                        transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.navigation {
+    &__body {
+        .cross-frame {
+            position: absolute;
+            z-index: 9;
+            width: 10%;
+            justify-content: center;
+            align-items: center;
+            right: 0;
+            height: 12vw;
+            background: unset;
+            border: unset;
+
+            .cross {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                .bar {
+                    width: 24px;
+                    height: 2px;
+                    background-color: $primary;
+                    &:nth-of-type(1) {
+                        transform: translateY(6px) rotate(45deg);
+                    }
+                    &:nth-of-type(2) {
+                        transform: translateY(-4.8px) rotate(-45deg);
                     }
                 }
             }
         }
     }
+}
 
+
+@media screen and (max-width:800px) {
+
+    button {
+        font-size: 2.6vw;
+    }
+
+
+    .home-banner {
+        button {
+            width: 24vw;
+            height: 24vw;
+        }
+
+    }
+
+
+}

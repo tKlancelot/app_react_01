@@ -7,3 +7,23 @@
         height: 2.8vw;
     }
 }
+
+
+@media screen and (max-width:1600px){
+
+    .footer{
+        &__body{
+            height:6vw;
+        }
+    }
+
+}
+
+@media screen and (max-width:800px){
+    .footer{
+        &__body{
+            height:20vw;
+            background: $secondary-medium;
+        }
+    }
+}

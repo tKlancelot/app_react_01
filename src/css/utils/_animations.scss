@@ -1,0 +1,29 @@
+@keyframes rotateR {
+    from {
+        transform: translateY(0px) rotate(0)
+    }
+
+    to {
+        transform: translateY(15px) rotate(45deg)
+    }
+}
+
+@keyframes rotateL {
+    from {
+        transform: translateY(0px) rotate(0)
+    }
+
+    to {
+        transform: translateY(-15px) rotate(-45deg)
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

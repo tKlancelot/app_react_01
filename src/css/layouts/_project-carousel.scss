@@ -1,4 +1,4 @@
-.project-carousel{
+.project-carousel {
     display: grid;
     height: 100%;
     overflow: hidden;
@@ -6,25 +6,56 @@
     @include background-linear;
     grid-template-rows: auto 1fr;
     min-height: 40vw;
-    &__header{
+
+    &__header {
         background-color: $secondary-medium;
         border-bottom: 1px solid $border-color;
         z-index: 1;
-        color:$write-overlay;
+        color: $write-overlay;
     }
 
-    &__body{
-        width:100%;
+    &__body {
+        width: 100%;
         z-index: 1;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: $gap;
         padding: 0 6vw;
-        place-content:center;
+        place-content: center;
     }
-    &__footer{
+
+    &__footer {
         position: absolute;
-        width:100%;
-        z-index:0;
+        width: 100%;
+        z-index: 0;
     }
+}
+
+
+@media screen and (max-width:800px) {
+
+    .project-carousel {
+        overflow: auto;
+        &__body{
+            grid-template-columns:1fr;
+            place-content: flex-start;
+            padding: 6vw 6vw;
+            grid-gap: 6vw;
+        }
+        &__header {
+            ul {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                height: 100%;
+                li {
+                    height: 10vw;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 0% 20%;
+                }
+            }
+        }
+    }
+
 }

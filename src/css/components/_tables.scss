@@ -12,7 +12,8 @@ table {
         // border: 1px solid;
         padding: 0.75rem;
     }
-    tbody{
+
+    tbody {
         td:nth-child(1) {
             color: $write-overlay;
             width: 10vw;
@@ -30,4 +31,33 @@ tr:nth-child(odd) {
 
 tr:nth-child(even) {
     background-color: $border-color;
+}
+
+
+@media screen and (max-width:800px) {
+
+    table,
+    tr,
+    td {
+        font-size: 2vw;
+    }
+
+
+    table {
+        tbody {
+            td:nth-child(1) {
+                width: 30vw;
+            }
+
+            td:nth-child(2) {
+                width: 60vw;
+            }
+        }
+    }
+
+    tr:nth-child(even) {
+        background-color: unset;
+    }
+
+
 }

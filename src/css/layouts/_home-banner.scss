@@ -18,8 +18,16 @@
         }
     }
 
-    &__header {
+}
 
+
+@media screen and (max-width:800px){
+    .home-banner{
+        &__body{
+            .content{
+                gap:$mobile-gap;
+            }
+        }
     }
 }
 
