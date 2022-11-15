@@ -585,12 +585,18 @@ h2 {
 }
 
 @media screen and (max-width: 800px) {
+  h1, h2 {
+    text-shadow: -1px -1px 0px #6f49b8, 0px -1px 0px #6f49b8;
+  }
   .home-banner h1 {
     font-size: 12.6vw;
     letter-spacing: 0.16rem;
   }
   .project-card .details__panel h3, .project-card__body h3 {
     font-size: 3vw;
+  }
+  h2 {
+    font-size: 6.4vw;
   }
 }
 .square {
@@ -725,6 +731,9 @@ span {
   }
   .footer__body p {
     font-size: 2.6vw;
+  }
+  .profile__body__right p {
+    line-height: 3.2vw;
   }
 }
 table,
@@ -1025,6 +1034,9 @@ particle {
   min-height: 40vw;
   background: linear-gradient(180deg, #0e0324, #18063b);
 }
+.home-banner__header {
+  position: absolute;
+}
 .home-banner__body {
   display: flex;
   width: 100%;
@@ -1039,6 +1051,9 @@ particle {
 }
 
 @media screen and (max-width: 800px) {
+  .home-banner {
+    min-height: 120vw;
+  }
   .home-banner__body .content {
     gap: 8vw;
   }
@@ -1127,6 +1142,11 @@ particle {
   z-index: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .booklet {
+    min-height: 80vw;
+  }
+}
 .project-card {
   background: rgba(35, 8, 85, 0.2823529412);
   border: 1px solid rgba(55, 21, 117, 0.4470588235);
@@ -1167,6 +1187,7 @@ particle {
   width: 100%;
   place-items: center;
   flex-direction: column;
+  z-index: 96;
 }
 .details__panel__frame {
   box-shadow: -1px -1px 1px 0px #230c4e, 1px 1px 1px 0px #230c4e;
@@ -1177,6 +1198,7 @@ particle {
   flex-direction: column;
   justify-content: space-evenly;
   border-radius: 6px;
+  z-index: 96;
 }
 .details__panel__frame__header {
   width: 100%;
@@ -1186,7 +1208,6 @@ particle {
   background-color: #18063b;
   border-bottom: 1px solid rgba(55, 21, 117, 0.4470588235);
   border-radius: 6px 6px 0px 0px;
-  cursor: grab;
 }
 .details__panel__frame__body {
   padding: 3.2vw 3.2vw 0vw;
@@ -1317,6 +1338,27 @@ particle {
   fill: #f2f2f2;
 }
 
+@media screen and (max-width: 800px) {
+  .profile {
+    min-height: 120vw;
+  }
+  .profile__body {
+    grid-template-columns: 1fr;
+  }
+  .profile__body .content-frame {
+    width: 92%;
+  }
+  .profile__body__right {
+    background-color: unset;
+    padding: 8vw;
+    border: unset;
+  }
+  .profile__body__right .social-media svg {
+    width: 3.6vw;
+    height: 3.6vw;
+    margin: auto 4.8vw auto 0;
+  }
+}
 .contact {
   display: flex;
   height: 100%;

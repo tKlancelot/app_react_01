@@ -42,7 +42,7 @@ const About = () => {
           <div className="profile__body">
             <div className="profile__body__left">
               <div className="portrait-frame">
-                <img src="./images/khoa-vo.jpg" alt="portrait grayscale" />
+                <img src="./images/default-background.jpg" alt="portrait grayscale" />
               </div>
             </div>
             <div className="profile__body__right">

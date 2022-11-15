@@ -2,6 +2,7 @@ import { React, useRef, useLayoutEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import gsap from "gsap";
+import { BasisCurve, BundleCurve } from "react-svg-curve";
 // import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 
 const Home = () => {
@@ -48,6 +49,34 @@ const Home = () => {
         <div className="home-banner">
           {/* <BrowserView> */}
           <div className="home-banner__header">
+                <svg width={window.innerWidth} height={window.innerHeight}>
+                  <BasisCurve
+                    data={[
+                      [0, 200],
+                      [140, 320],
+                      [360, 340],
+                      [500, 175],
+                      [440, -10],
+                    ]}
+                    stroke="#37157572"
+                    strokeWidth={1}
+                    showPoints={false}
+                    beta={1}
+                    pointElement={([x, y], i) => (
+                      <text
+                        x={x}
+                        y={y}
+                        key={i}
+                        alignmentBaseline="bottom"
+                        textAnchor="bottom"
+                        fill="blue"
+                        fontSize={24}
+                      >
+                        {i}
+                      </text>
+                    )}
+                  />
+              </svg>
           </div>
           {/* </BrowserView> */}
           <div className="home-banner__body">

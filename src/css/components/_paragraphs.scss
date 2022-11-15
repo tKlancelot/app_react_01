@@ -53,4 +53,14 @@ span {
             }
         }
     }
+
+    .profile{
+        &__body{
+            &__right{
+                p{
+                    line-height: 3.2vw;
+                }
+            }
+        }
+    }
 }

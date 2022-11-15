@@ -73,3 +73,29 @@
     }
 
 }
+
+@media screen and (max-width:800px){
+
+    .profile{
+        min-height: 120vw;
+        &__body{
+            grid-template-columns: 1fr;
+            .content-frame{
+                width: 92%;
+            }
+            &__right{
+                background-color: unset;
+                padding: $mobile-gap;
+                border: unset;
+                .social-media{
+                    svg{
+                        width: 3.6vw;
+                        height: 3.6vw;
+                        margin: auto 4.8vw auto 0;
+                    }
+                }
+            }
+        }
+    }
+
+}

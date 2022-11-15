@@ -37,9 +37,9 @@
     width: 100%;
     place-items: center;
     flex-direction: column;
+    z-index: 96;
 
     &__frame {
-
         box-shadow:-1px -1px 1px 0px $secondary-medium, 1px 1px 1px 0px $secondary-medium;
         background-color: $secondary-medium;
         border: 1px solid $secondary;
@@ -48,6 +48,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         border-radius: 6px;
+        z-index: 96;
 
         &__header {
             width: 100%;
@@ -57,7 +58,7 @@
             background-color: $secondary-dark;
             border-bottom: 1px solid $border-color;
             border-radius: 6px 6px 0px 0px;
-            cursor: grab;
+            // cursor: grab;
         }
 
         &__body {

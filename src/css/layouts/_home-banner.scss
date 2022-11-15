@@ -6,6 +6,10 @@
     min-height: 40vw;
     @include background-linear;
 
+    &__header{
+        position: absolute;
+    }
+
     &__body {
         display: flex;
         width: 100%;
@@ -23,6 +27,7 @@
 
 @media screen and (max-width:800px){
     .home-banner{
+        min-height: 120vw;
         &__body{
             .content{
                 gap:$mobile-gap;
