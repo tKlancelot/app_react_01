@@ -8,7 +8,6 @@ button {
         color: $write-overlay;
         border-radius: 50%;
         @include simple-shadow;
-        // @include border-thema;
         background-color: $outline;
         padding: 1vw;
         width: 5.6vw;
@@ -92,9 +91,12 @@ button {
         button {
             width: 24vw;
             height: 24vw;
+            outline:unset!important;
+            border: 4.8px solid $border-color!important;
         }
 
     }
+
 
 
 }

@@ -32,8 +32,8 @@ const Logo = () => {
         particle.style.border = '1px solid white';
         // width = height = 'auto';
           // Generate a random x & y destination within a distance of 150px from the mouse
-        const destinationX = x + (Math.random() - 0.16) * 2 * 200;
-        const destinationY = y + (Math.random() - 0.16) * 2 * 200;
+        const destinationX = x + (Math.random() - 0.4) * 2 * 200;
+        const destinationY = y + (Math.random() - 0.4) * 2 * 200;
 
         // Store the animation in a variable because we will need it later
         const animation = particle.animate([

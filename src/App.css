@@ -527,9 +527,19 @@ a {
     height: 16vw;
     width: 100%;
   }
+  .navigation ul .is-active li::before {
+    content: "->";
+    position: absolute;
+    margin-left: -5%;
+    width: 20px;
+    height: 20px;
+  }
   .navigation ul li {
-    font-size: 4.2vw;
-    color: rgba(242, 242, 242, 0.5725490196);
+    font-size: 3.2vw;
+    text-transform: uppercase;
+    color: rgba(242, 242, 242, 0.6431372549);
+    width: 40vw;
+    text-align: start;
   }
 }
 ul li {
@@ -590,7 +600,7 @@ h2 {
   }
   .home-banner h1 {
     font-size: 12.6vw;
-    letter-spacing: 0.16rem;
+    letter-spacing: 0.016rem;
   }
   .project-card .details__panel h3, .project-card__body h3 {
     font-size: 3vw;
@@ -620,6 +630,11 @@ h2 {
 .square .medium {
   min-width: 28vw;
   min-height: 28vw;
+}
+
+.star {
+  position: absolute;
+  display: flex;
 }
 
 button {
@@ -700,6 +715,8 @@ button {
   .home-banner button {
     width: 24vw;
     height: 24vw;
+    outline: unset !important;
+    border: 4.8px solid rgba(55, 21, 117, 0.4470588235) !important;
   }
 }
 p {
@@ -1036,10 +1053,13 @@ particle {
 }
 .home-banner__header {
   position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .home-banner__body {
   display: flex;
   width: 100%;
+  position: relative;
 }
 .home-banner__body .content {
   margin: auto;
@@ -1137,14 +1157,48 @@ particle {
   background-color: #230c4e;
   border-radius: 6px;
 }
+.booklet__body .splide__pagination {
+  bottom: -18%;
+}
 .booklet__footer {
   position: absolute;
   z-index: 0;
 }
 
+.splide__pagination {
+  counter-reset: pagination-num;
+}
+.splide__pagination__page {
+  border-radius: unset;
+  background: unset;
+  min-height: 1.2vw;
+  color: rgba(242, 242, 242, 0.6431372549);
+}
+.splide__pagination__page::before {
+  padding: 0.16rem;
+}
+.splide__pagination .is-active {
+  background-color: unset;
+  border-radius: 2px;
+}
+.splide__pagination .is-active::before {
+  background-color: #3b1a79;
+}
+
+.splide__pagination__page:before {
+  counter-increment: pagination-num;
+  content: counter(pagination-num);
+}
+
 @media screen and (max-width: 800px) {
   .booklet {
     min-height: 80vw;
+  }
+  .booklet__body .splide__slide {
+    height: 72vw;
+  }
+  .splide__pagination__page {
+    min-height: 2.8vw;
   }
 }
 .project-card {
@@ -1247,6 +1301,16 @@ particle {
   .details__panel__frame__body .description-frame p {
     line-height: 2.8vw;
   }
+  .details__panel__frame__body .splide__arrow {
+    height: 1em;
+    width: 1em;
+  }
+  .details__panel__frame__body .splide__arrow--prev {
+    left: -3vw;
+  }
+  .details__panel__frame__body .splide__arrow--next {
+    right: -3vw;
+  }
   .details__panel__frame__header {
     padding: 2vw;
     background-color: #230c4e;
@@ -1340,7 +1404,7 @@ particle {
 
 @media screen and (max-width: 800px) {
   .profile {
-    min-height: 120vw;
+    min-height: 140vw;
   }
   .profile__body {
     grid-template-columns: 1fr;
@@ -1354,9 +1418,12 @@ particle {
     border: unset;
   }
   .profile__body__right .social-media svg {
-    width: 3.6vw;
-    height: 3.6vw;
+    width: 4.4vw;
+    height: 4.4vw;
     margin: auto 4.8vw auto 0;
+  }
+  .profile__body__left .portrait-frame {
+    width: 32vw;
   }
 }
 .contact {

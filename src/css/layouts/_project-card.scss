@@ -113,6 +113,20 @@
                     line-height: 2.8vw;
                 }
             }
+
+            .splide__arrow{
+                height: 1em;
+                width: 1em;
+            }
+
+            .splide__arrow--prev {
+                left: -3vw;
+            }
+
+            .splide__arrow--next {
+                right: -3vw;
+            }
+
         }
 
         &__header {

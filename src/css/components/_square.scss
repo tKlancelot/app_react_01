@@ -22,6 +22,11 @@
     }
 }
 
+.star{
+    position: absolute;
+    display: flex;
+}
+
 @media screen and (max-width:800px) {
     .square {
         .square-frame {}

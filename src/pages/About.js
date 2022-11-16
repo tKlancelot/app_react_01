@@ -1,10 +1,10 @@
 import {React, useRef, useLayoutEffect} from 'react';
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
-import Square from "../components/Square";
 import gsap from 'gsap';
 import SocialLink from '../components/SocialLink';
 import { faInstagram, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+// import Square from "../components/Square";
 
 
 const About = () => {
@@ -36,8 +36,7 @@ const About = () => {
       <main>
         <div className="profile">
           <div className="profile__header">
-            <Square top="-10%" left="-10%" width="56vw" height="56vw" radius="32%" rotation="10deg"/>
-            <Square top="25%" left="72%" width="40vw" height="40vw" radius="32%" rotation="-10deg"/>
+
           </div>
           <div className="profile__body">
             <div className="profile__body__left">

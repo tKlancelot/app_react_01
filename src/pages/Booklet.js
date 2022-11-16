@@ -27,8 +27,16 @@ const Booklet = () => {
                 width : '80vw',
                 gap   : '2vw',
                 perPage:3,
-                arrows:false
-
+                arrows:false,
+                breakpoints: {
+                    780: {
+                        // padding:'4vw',
+                        width : 'auto',
+                        // gap:'0',
+                        perPage:1,
+                        focus:'center'
+                    }
+                }
               }}
             >
               <SplideSlide>

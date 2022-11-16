@@ -2,13 +2,22 @@ import { React, useRef, useLayoutEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import gsap from "gsap";
-import { BasisCurve, BundleCurve } from "react-svg-curve";
+import StarSvg from "../components/StarSvg";
+// import { Timeline } from "gsap/gsap-core";
+// import { BasisClosedCurve, BasisCurve, BundleCurve } from "react-svg-curve";
 // import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 
 const Home = () => {
-  // const n = 48;
 
   const comp = useRef();
+
+  const n = 40;
+
+
+  
+  function randomIntFromInterval(min, max) { // min and max included 
+    return Math.ceil(Math.random() * (max - min + 1) + min)
+  }
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -24,19 +33,33 @@ const Home = () => {
       const item = document.querySelector(".home-banner__body .content button");
 
       gsap.to(item, {
-        duration: 1.2,
+        duration: 1.8,
         color: "#fff",
         border: "1px solid #33156b",
-        outlineColor: "#37157524",
+        outlineColor: "#37157556",
         outlineWidth: "2.4vw",
-        repeat: -1,
         ease: "power1.linear",
-        yoyo: true,
-        // paused: true
+        repeat: -1,
+        yoyo: true
       });
 
-      //   item.addEventListener("mouseover", () => animation.pause());
-      //   item.addEventListener("mouseout", () => animation.restart());
+      var tl = gsap.timeline({repeat: -1, repeatDelay: 1, yoyo:true});
+
+      tl.to('.star',{
+        x:"random([-400,400])",
+        y:"random([-400, 400])",
+        duration:"random([12,20])",
+        scale:"random([0.5,1])",
+        rotation:"random([0,180])"
+        // ease: "power3.linear",
+      }).to('.star',{
+        x:"random([-400,400])",
+        y:"random([-400, 400])",
+        duration:"random([12,20])",
+        rotation:"random([0,180])"
+        // ease: "power3.linear",
+      })
+
     }, comp); // <- IMPORTANT! Scopes selector text
 
     return () => ctx.revert(); // cleanup
@@ -49,34 +72,20 @@ const Home = () => {
         <div className="home-banner">
           {/* <BrowserView> */}
           <div className="home-banner__header">
-                <svg width={window.innerWidth} height={window.innerHeight}>
-                  <BasisCurve
-                    data={[
-                      [0, 200],
-                      [140, 320],
-                      [360, 340],
-                      [500, 175],
-                      [440, -10],
-                    ]}
-                    stroke="#37157572"
-                    strokeWidth={1}
-                    showPoints={false}
-                    beta={1}
-                    pointElement={([x, y], i) => (
-                      <text
-                        x={x}
-                        y={y}
-                        key={i}
-                        alignmentBaseline="bottom"
-                        textAnchor="bottom"
-                        fill="blue"
-                        fontSize={24}
-                      >
-                        {i}
-                      </text>
-                    )}
-                  />
-              </svg>
+          {[...Array(n)].map((e, i) => 
+          <StarSvg 
+            className="busterCards" 
+            key={i} 
+            top={randomIntFromInterval(10,100)} 
+            left={randomIntFromInterval(10,100)}
+            width={randomIntFromInterval(0,1)}
+            height={randomIntFromInterval(0,1)}
+            rotation={randomIntFromInterval(1,360)}
+          />
+          )}
+            <div className="home-banner__header__background">
+              <img src="./images/milky-way.jpg" alt="milky way" />
+            </div>
           </div>
           {/* </BrowserView> */}
           <div className="home-banner__body">

@@ -102,9 +102,23 @@ a {
 
     .navigation {
         ul {
+            .is-active{
+                li{
+                    &::before{
+                        content:'->';
+                        position:absolute;
+                        margin-left:-5%;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
             li {
-                font-size: 4.2vw;
-                color: #f2f2f292;
+                font-size: 3.2vw;
+                text-transform: uppercase;
+                color: $write-overlay;
+                width: 40vw;
+                text-align: start;
             }
         }
     }

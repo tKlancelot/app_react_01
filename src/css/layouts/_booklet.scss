@@ -18,6 +18,9 @@
                 height: 28vw;
                 @include simple-card;
             }
+            &__pagination{
+                bottom: -18%;
+            }
         }
     }
     &__footer{
@@ -26,11 +29,49 @@
     }
 }
 
+.splide__pagination {
+  counter-reset: pagination-num;
+  &__page{
+    border-radius: unset;
+    background: unset;
+    min-height: 1.2vw;
+    color: $write-overlay;
+    &::before{
+        padding: 0.16rem;
+    }
+  }
+  .is-active{
+    background-color: unset;
+    border-radius: 2px;
+    &::before{
+        background-color: $secondary;
+    }
+  }
+}
+
+.splide__pagination__page:before {
+  counter-increment: pagination-num;
+  content: counter( pagination-num );
+}
+
 
 @media screen and (max-width:800px){
 
     .booklet{
         min-height: 80vw;
+        &__body{
+            .splide{
+                &__slide{
+                    height: 72vw;
+                }
+            }
+        }
+    }
+
+    .splide__pagination {
+        &__page{
+            min-height: 2.8vw;
+        }
     }
 
 }
