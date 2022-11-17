@@ -16,8 +16,6 @@ span {
     }
 }
 
-
-
 .profile {
     &__body {
         &__right {
@@ -25,6 +23,20 @@ span {
                 line-height: 1.8vw;
             }
         }
+    }
+}
+
+.modale {
+    &__frame {
+        p {
+            line-height: 1.5vw;
+        }
+    }
+}
+
+.expertise-card{
+    p{
+        text-align: justify;
     }
 }
 
@@ -54,12 +66,20 @@ span {
         }
     }
 
-    .profile{
-        &__body{
-            &__right{
-                p{
+    .profile {
+        &__body {
+            &__right {
+                p {
                     line-height: 3.2vw;
                 }
+            }
+        }
+    }
+
+    .modale {
+        &__frame {
+            p {
+                line-height: 3.2vw;
             }
         }
     }

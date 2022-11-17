@@ -605,6 +605,9 @@ h2 {
   .project-card .details__panel h3, .project-card__body h3 {
     font-size: 3vw;
   }
+  .modale__frame__header h3 {
+    font-size: 2.8vw;
+  }
   h2 {
     font-size: 6.4vw;
   }
@@ -726,6 +729,14 @@ span {
   line-height: 1.8vw;
 }
 
+.modale__frame p {
+  line-height: 1.5vw;
+}
+
+.expertise-card p {
+  text-align: justify;
+}
+
 @media screen and (max-width: 1600px) {
   .footer__body p {
     font-size: 0.92vw;
@@ -739,6 +750,9 @@ span {
     font-size: 2.6vw;
   }
   .profile__body__right p {
+    line-height: 3.2vw;
+  }
+  .modale__frame p {
     line-height: 3.2vw;
   }
 }
@@ -1321,6 +1335,25 @@ particle {
     padding: 0 2vw 2vw;
   }
 }
+.expertise-card {
+  display: grid;
+  height: 100%;
+  border-bottom: 1px solid;
+  place-content: baseline;
+}
+.expertise-card__body {
+  padding: 2vw;
+  display: grid;
+  grid-gap: 1vw;
+}
+.expertise-card__header {
+  padding: 1vw;
+  padding-left: 2vw;
+}
+.expertise-card__footer {
+  height: 2px;
+}
+
 .modale {
   position: absolute;
   top: 0;
@@ -1335,14 +1368,44 @@ particle {
   background: rgba(35, 8, 85, 0.2823529412);
   border: 1px solid rgba(55, 21, 117, 0.4470588235);
   outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
-  margin: auto;
   border-radius: 4px;
-  background-color: #18063b;
+  background-color: #230c4e;
   height: 24vw;
   width: 32vw;
+  display: grid;
+  margin: auto;
+  place-content: space-between;
+  grid-gap: 2vw;
+}
+.modale__frame__header {
+  padding: 0.75vw;
+  padding-left: 2vw;
+  background-color: #18063b;
+  display: flex;
+  align-items: center;
+  cursor: grab;
+}
+.modale__frame__footer, .modale__frame__body {
   padding: 2vw;
 }
+.modale__frame__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modale__frame__footer svg {
+  cursor: pointer;
+}
 
+@media screen and (max-width: 800px) {
+  .modale__frame {
+    width: 72vw;
+    min-height: 60vw;
+  }
+  .modale__frame__header, .modale__frame__body, .modale__frame__footer {
+    padding: 2vw;
+  }
+}
 .profile {
   display: flex;
   height: 100%;

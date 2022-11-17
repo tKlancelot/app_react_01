@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-// import Draggable from 'react-draggable';
-// import {DraggableCore} from 'react-draggable';
 
 const ProjectCard = (props) => {
 

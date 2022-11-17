@@ -1,0 +1,19 @@
+.expertise-card{
+    display: grid;
+    height: 100%;
+    border-bottom:1px solid;
+    place-content: baseline;
+    &__body{
+        padding:2vw;
+        display: grid;
+        grid-gap:1vw;
+    }
+    &__header{
+        padding:1vw;
+        padding-left:2vw
+    }
+    &__footer{
+        height: 2px;
+    }
+
+}

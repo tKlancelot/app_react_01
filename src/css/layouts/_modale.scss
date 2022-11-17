@@ -1,19 +1,56 @@
-.modale{
+.modale {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     display: flex;
     width: 100%;
     height: 100%;
-    &__frame{
+
+    &__frame {
         position: relative;
         z-index: 9;
         @include simple-shadow;
-        margin:auto;
         border-radius: 4px;
-        background-color: $secondary-dark;
+        background-color: $secondary-medium;
         height: 24vw;
         width: 32vw;
-        padding: 2vw;
+        display: grid;
+        margin: auto;
+        place-content: space-between;
+        grid-gap: 2vw;
+
+        &__header {
+            padding: 0.75vw;
+            padding-left: 2vw;
+            background-color: $secondary-dark;
+            @include flex-center;
+            cursor: grab;
+        }
+
+        &__footer,
+        &__body {
+            padding: 2vw;
+        }
+
+        &__footer {
+            @include flex-center-center;
+            svg {
+                cursor: pointer;
+            }
+        }
     }
+}
+
+@media screen and (max-width:800px){
+
+    .modale{
+        &__frame{
+            width: 72vw;
+            min-height: 60vw;
+            &__header,&__body,&__footer{
+                padding: 2vw;
+            }
+        }
+    }
+
 }

@@ -18,7 +18,7 @@ const SceneEmail3d = () => {
 
     return (
         <div>
-            <Canvas id="email3dButton" camera={{position: [-1, 3, 5], fov: 48}} flat onClick={handleModale}>
+            <Canvas id="email3dButton" camera={{position: [-1, 3, 5], fov: 48}} flat onDoubleClick={handleModale}>
                 <CameraController />
                 <Suspense fallback={null}>
                     <ambientLight intensity={0.72} />
@@ -30,7 +30,7 @@ const SceneEmail3d = () => {
                     {/* <Phone3D/> */}
                 </Suspense>
             </Canvas>
-            {(state.modale === true) && <Modal/>}
+            {(state.modale === true) && <Modal modaleState={state.modale} updateModaleState={setState}/>}
         </div>
     );
 };

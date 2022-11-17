@@ -67,6 +67,16 @@ h2{
         }
     }
 
+    .modale{
+        &__frame{
+            &__header{
+                h3{
+                    font-size: 2.8vw;
+                }
+            }
+        }
+    }
+
     h2{
         font-size: 6.4vw;
     }
