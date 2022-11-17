@@ -30,8 +30,8 @@ const Booklet = () => {
                 arrows:false,
                 breakpoints: {
                     780: {
-                        // padding:'4vw',
-                        width : 'auto',
+                        type:'loop',
+                        width : '100vw',
                         // gap:'0',
                         perPage:1,
                         focus:'center'

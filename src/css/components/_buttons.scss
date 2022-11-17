@@ -3,20 +3,6 @@ button {
     font-size: 0.78vw;
 }
 
-.home-banner {
-    button {
-        color: $write-overlay;
-        border-radius: 50%;
-        @include simple-shadow;
-        background-color: $outline;
-        padding: 1vw;
-        width: 5.6vw;
-        height: 5.6vw;
-        @include item-transition;
-        outline-width: 0vw;
-        outline-color: transparent;
-    }
-}
 
 .project-card__body,
 .details__panel__frame__header {
@@ -85,18 +71,5 @@ button {
     button {
         font-size: 2.6vw;
     }
-
-
-    .home-banner {
-        button {
-            width: 24vw;
-            height: 24vw;
-            outline:unset!important;
-            border: 4.8px solid $border-color!important;
-        }
-
-    }
-
-
 
 }

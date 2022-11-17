@@ -642,21 +642,6 @@ button {
   font-size: 0.78vw;
 }
 
-.home-banner button {
-  color: rgba(242, 242, 242, 0.6431372549);
-  border-radius: 50%;
-  background: rgba(35, 8, 85, 0.2823529412);
-  border: 1px solid rgba(55, 21, 117, 0.4470588235);
-  outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
-  background-color: rgba(55, 21, 117, 0.1254901961);
-  padding: 1vw;
-  width: 5.6vw;
-  height: 5.6vw;
-  transition: 0.12s ease-in;
-  outline-width: 0vw;
-  outline-color: transparent;
-}
-
 .project-card__body button,
 .details__panel__frame__header button {
   display: flex;
@@ -711,12 +696,6 @@ button {
 @media screen and (max-width: 800px) {
   button {
     font-size: 2.6vw;
-  }
-  .home-banner button {
-    width: 24vw;
-    height: 24vw;
-    outline: unset !important;
-    border: 4.8px solid rgba(55, 21, 117, 0.4470588235) !important;
   }
 }
 p {
@@ -1074,9 +1053,6 @@ particle {
   .home-banner {
     min-height: 120vw;
   }
-  .home-banner__body .content {
-    gap: 8vw;
-  }
 }
 .project-carousel {
   display: grid;
@@ -1196,6 +1172,9 @@ particle {
   }
   .booklet__body .splide__slide {
     height: 72vw;
+    margin-right: 2rem !important;
+    padding: 1rem;
+    width: 67vw !important;
   }
   .splide__pagination__page {
     min-height: 2.8vw;

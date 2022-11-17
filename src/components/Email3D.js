@@ -19,7 +19,7 @@ export default function Email3D(props) {
 
   return (
     <group ref={boxRef} {...props} dispose={null}>
-     <group position={[0, 1.62, -0.02]} rotation={[-1.71, 1.57, 0]}>
+     <group position={[0, 0.75, -0.02]} rotation={[-1.71, 1.57, 0]}>
         <mesh
           castShadow
           receiveShadow
@@ -38,7 +38,7 @@ export default function Email3D(props) {
         receiveShadow
         geometry={nodes.Text.geometry}
         material={materials.GOLD}
-        position={[-0.57, 1.37, 0.11]}
+        position={[-0.57, 0.50, 0.11]}
         rotation={[1.43, 0, 0]}
         scale={1.09}
       />
@@ -47,7 +47,7 @@ export default function Email3D(props) {
         receiveShadow
         geometry={nodes.Cylinder001.geometry}
         material={materials.GOLD}
-        position={[0, 0.07, 0]}
+        position={[0, -1, 0]}
         rotation={[0, -1.57, 0]}
         scale={[1, 0.6, 1]}
       />
@@ -56,7 +56,7 @@ export default function Email3D(props) {
         receiveShadow
         geometry={nodes.Cylinder004.geometry}
         material={materials["Material.006"]}
-        position={[0.8, 0.2, 0]}
+        position={[0.8, -0.92, 0]}
         scale={[0.1, 0.03, 0.1]}
       />
       <mesh
@@ -64,7 +64,7 @@ export default function Email3D(props) {
         receiveShadow
         geometry={nodes.Cylinder002.geometry}
         material={materials["Material.006"]}
-        position={[-0.8, 0.2, 0]}
+        position={[-0.8, -0.92, 0]}
         scale={[0.1, 0.03, 0.1]}
       />
       <mesh
@@ -72,7 +72,7 @@ export default function Email3D(props) {
         receiveShadow
         geometry={nodes.Cylinder003.geometry}
         material={materials["Material.006"]}
-        position={[0, 0.2, 0.8]}
+        position={[0, -0.92, 0.8]}
         rotation={[0, -Math.PI / 2, 0]}
         scale={[0.1, 0.03, 0.1]}
       />
@@ -81,7 +81,7 @@ export default function Email3D(props) {
         receiveShadow
         geometry={nodes.Cylinder005.geometry}
         material={materials["Material.006"]}
-        position={[0, 0.2, -0.8]}
+        position={[0, -0.92, -0.8]}
         rotation={[0, -Math.PI / 2, 0]}
         scale={[0.1, 0.03, 0.1]}
       />
