@@ -693,6 +693,16 @@ button {
   transform: translateY(-4.8px) rotate(-45deg);
 }
 
+#emailTarik {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+
+#email3dButton {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 800px) {
   button {
     font-size: 2.6vw;
@@ -1311,6 +1321,28 @@ particle {
     padding: 0 2vw 2vw;
   }
 }
+.modale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.modale__frame {
+  position: relative;
+  z-index: 9;
+  background: rgba(35, 8, 85, 0.2823529412);
+  border: 1px solid rgba(55, 21, 117, 0.4470588235);
+  outline: 1vw solid rgba(55, 21, 117, 0.0156862745);
+  margin: auto;
+  border-radius: 4px;
+  background-color: #18063b;
+  height: 24vw;
+  width: 32vw;
+  padding: 2vw;
+}
+
 .profile {
   display: flex;
   height: 100%;

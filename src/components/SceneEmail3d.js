@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import CameraController from './CameraController'
 import Email3D from './Email3D'
+import Modal from './Modal';
 // import Phone3D from './Phone3D'
 
 const SceneEmail3d = () => {
+
+    const [state, setState] = useState({modale : false});
+    
+    const handleModale = () => {
+        setState({
+            modale : !state.modale
+        })
+    }
+
     return (
         <div>
-            <Canvas  camera={{position: [-1, 3, 5], fov: 48}} flat>
+            <Canvas id="email3dButton" camera={{position: [-1, 3, 5], fov: 48}} flat onClick={handleModale}>
                 <CameraController />
                 <Suspense fallback={null}>
                     <ambientLight intensity={0.72} />
@@ -18,9 +28,9 @@ const SceneEmail3d = () => {
                     <spotLight intensity={0.9} position={[2, 4, 24]} />
                     <Email3D/>
                     {/* <Phone3D/> */}
-                    
                 </Suspense>
             </Canvas>
+            {(state.modale === true) && <Modal/>}
         </div>
     );
 };

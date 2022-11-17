@@ -1,0 +1,19 @@
+.modale{
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    &__frame{
+        position: relative;
+        z-index: 9;
+        @include simple-shadow;
+        margin:auto;
+        border-radius: 4px;
+        background-color: $secondary-dark;
+        height: 24vw;
+        width: 32vw;
+        padding: 2vw;
+    }
+}

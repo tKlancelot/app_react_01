@@ -19,6 +19,8 @@ const Home = () => {
   //   return Math.ceil(Math.random() * (max - min + 1) + min)
   // }
 
+  
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
 
@@ -97,7 +99,7 @@ const Home = () => {
                 <br />
               </h1>
                 <div className="picture-frame">
-                    <SceneEmail3d/>
+                  <SceneEmail3d/>
                 </div>
             </div>
           </div>
