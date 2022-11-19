@@ -4,7 +4,6 @@ import Navigation from "../components/Navigation";
 import gsap from 'gsap';
 import SocialLink from '../components/SocialLink';
 import { faInstagram, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-// import Square from "../components/Square";
 
 
 const About = () => {
@@ -20,8 +19,7 @@ const About = () => {
           scale:0.72,
           duration:2.8,
           rotate:-90,
-          ease:'Power2.easeOut',
-          x:-400,
+          ease:'Power2.easeOut'
       })
       
       }, comp);

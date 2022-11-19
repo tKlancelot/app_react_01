@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 
 export default function Phone3D(props) {
+
   const { nodes, materials } = useGLTF("gltf/phone.gltf");
+
+  const boxRef = useRef();
+
+
+  useFrame(() => {
+    boxRef.current.rotation.y += 0.00750;
+  });
+
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props} ref={boxRef} dispose={null}>
       <group
         position={[0, 0, 0]}
         rotation={[Math.PI / 2, -Math.PI / 2, 0]}

@@ -31,6 +31,17 @@
 @media screen and (max-width:800px){
     .home-banner{
         min-height: 120vw;
+        &__body{
+            .content{
+                .picture-frame{
+                    #email3dButton,#email3dButton > div,
+                    canvas{
+                        width: 92vw!important;
+                        height: auto!important;
+                    }
+                }
+            }
+        }
     }
 }
 

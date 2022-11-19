@@ -17,7 +17,6 @@
 
 
 
-
 @mixin section-border {
     border-bottom: 1px solid $border-color;
     border-top: 1px solid $border-color;
@@ -28,7 +27,7 @@
 }
 
 @mixin background-linear {
-    background: linear-gradient(180deg, $secondary-darkest, $secondary-dark);
+    background: $secondary-darkest;
 }
 
 @mixin item-transition {

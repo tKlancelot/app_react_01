@@ -4,6 +4,7 @@
     height: 100%;
     overflow: hidden;
     position: relative;
+    min-height: 40vw;
 
     &__body {
         width: 100%;
@@ -12,67 +13,82 @@
         justify-content: center;
         z-index: 1;
         position: relative;
-        .splide{
+
+        .splide {
             width: 100%;
-            &__slide{
-                height: 28vw;
+            gap: 3.2vw;
+            display: flex;
+            flex-direction: column;
+            cursor: grab;
+
+            &__slide {
+                height: 30vw;
                 @include simple-card;
             }
-            &__pagination{
-                bottom: -18%;
+
+            &__pagination {
+                position: relative;
             }
         }
     }
-    &__footer{
+
+    &__footer {
         position: absolute;
         z-index: 0;
     }
 }
 
 .splide__pagination {
-  counter-reset: pagination-num;
-  &__page{
-    border-radius: unset;
-    background: unset;
-    min-height: 1.2vw;
-    color: $write-overlay;
-    &::before{
-        padding: 0.16rem;
+    counter-reset: pagination-num;
+
+    &__page {
+        border-radius: unset;
+        background: unset;
+        min-height: 1.2vw;
+        color: $write-overlay;
+
+        &::before {
+            padding: 0.16rem;
+        }
     }
-  }
-  .is-active{
-    background-color: unset;
-    border-radius: 2px;
-    &::before{
-        background-color: $secondary;
+
+    .is-active {
+        background-color: unset;
+        border-radius: 2px;
+
+        &::before {
+            background-color: $secondary;
+        }
     }
-  }
 }
 
 .splide__pagination__page:before {
-  counter-increment: pagination-num;
-  content: counter( pagination-num );
+    counter-increment: pagination-num;
+    content: counter(pagination-num);
 }
 
 
-@media screen and (max-width:800px){
+@media screen and (max-width:520px) {
 
-    .booklet{
-        min-height: 80vw;
-        &__body{
-            .splide{
-                &__slide{
-                    height: 72vw;
-                    margin-right: 2rem!important;
-                    padding: 1rem;
-                    width: 67vw!important;
+    .booklet {
+        min-height: 120vw;
+
+        &__body {
+            .splide {
+                gap: 10vw;
+                &__slide {
+                    height: 80vw;
+                    margin-right: 2rem !important;
+                    padding: 0;
+                    width: 67vw !important;
+
                 }
             }
         }
     }
 
     .splide__pagination {
-        &__page{
+        &__page {
             min-height: 2.8vw;
         }
     }

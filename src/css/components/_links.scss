@@ -110,13 +110,16 @@ a {
                         margin-left:-5%;
                         width: 20px;
                         height: 20px;
+                        color:gold;
+                        font-family: $font-primary-light;
                     }
                 }
             }
             li {
-                font-size: 3.2vw;
+                font-size: 4vw;
                 text-transform: uppercase;
                 color: $write-overlay;
+                font-family: $font-alternative;
                 width: 40vw;
                 text-align: start;
             }

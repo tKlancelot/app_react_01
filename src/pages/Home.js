@@ -2,24 +2,11 @@ import { React, useRef, useLayoutEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import gsap from "gsap";
-import SceneEmail3d from "../components/SceneEmail3d";
-// import StarSvg from "../components/StarSvg";
-// import Square from "../components/Square";
-// import { Timeline } from "gsap/gsap-core";
-// import { BasisClosedCurve, BasisCurve, BundleCurve } from "react-svg-curve";
-// import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
+import MyScene from "../components/MyScene";
 
 const Home = () => {
 
   const comp = useRef();
-
-  // const n = 40;
-  
-  // function randomIntFromInterval(min, max) { // min and max included 
-  //   return Math.ceil(Math.random() * (max - min + 1) + min)
-  // }
-
-  
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -73,21 +60,6 @@ const Home = () => {
       <main>
         <div className="home-banner">
           <div className="home-banner__header">
-            {/* star system  */}
-            {/* {[...Array(n)].map((e, i) => 
-            <StarSvg 
-              className="busterCards" 
-              key={i} 
-              top={randomIntFromInterval(10,100)} 
-              left={randomIntFromInterval(10,100)}
-              width={randomIntFromInterval(0,1)}
-              height={randomIntFromInterval(0,1)}
-              rotation={randomIntFromInterval(1,360)}
-            />
-            )} */}
-
-
-            {/* banner with background */}
             <div className="home-banner__header__background">
               <img src="./images/milky-way.jpg" alt="milky way" />
             </div>
@@ -99,7 +71,7 @@ const Home = () => {
                 <br />
               </h1>
                 <div className="picture-frame">
-                  <SceneEmail3d/>
+                  <MyScene/>
                 </div>
             </div>
           </div>

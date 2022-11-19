@@ -46,10 +46,34 @@ h2{
     }
 }
 
+.expertise-card{
+    &__body{
+        h2{
+            text-transform: uppercase;
+            color:$secondary-light;
+            font-size: 1.8vw;
+        }
+    }
+}
+
+.modale{
+    &__frame{
+        &__header{
+            h3{
+                font-size: 1.2vw;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:800px){
 
     h1,h2{
         text-shadow:-1px -1px 0px $secondary-lightest,0px -1px 0px $secondary-lightest;
+    }
+
+    h2{
+        font-size: 6.4vw;
     }
 
     .home-banner{
@@ -58,6 +82,7 @@ h2{
             letter-spacing:0.016rem;
         }
     }
+
     .project-card{
         .details__panel,
         &__body{
@@ -77,7 +102,11 @@ h2{
         }
     }
 
-    h2{
-        font-size: 6.4vw;
+    .expertise-card{
+        &__body{
+            h2{
+                font-size: 3.6vw;
+            }
+        }
     }
 }

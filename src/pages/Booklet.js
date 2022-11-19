@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import ExpertiseCard from "../components/ExpertiseCard";
-import Square from "../components/Square";
 import { expertiseList } from "../datas/expertiseList";
 
 const Booklet = () => {
@@ -26,15 +25,13 @@ const Booklet = () => {
               options={{
                 type:'loop',
                 rewind: true,
-                width : '80vw',
+                width : '76vw',
                 gap   : '2vw',
-                perPage:2,
                 arrows:false,
+                perPage:2,
                 breakpoints: {
-                    780: {
-                        type:'loop',
-                        width : '100vw',
-                        // gap:'0',
+                    520: {
+                        width : '96vw',
                         perPage:1,
                         focus:'center'
                     }

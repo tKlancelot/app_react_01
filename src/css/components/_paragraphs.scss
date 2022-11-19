@@ -1,6 +1,7 @@
 p {
     color: $write-overlay;
     font-size: 0.80vw;
+    line-height: 1.25vw;
 }
 
 span {
@@ -55,7 +56,8 @@ span {
 @media screen and (max-width:800px) {
 
     p {
-        font-size: 2.6vw;
+        font-size: 2.4vw;
+        line-height: 3.6vw;
     }
 
     .footer {

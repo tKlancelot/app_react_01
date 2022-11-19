@@ -76,6 +76,7 @@ label {
         form {
             .input-group {
                 display: grid;
+                gap: 0.1vw;
 
                 &:nth-child(5) {
                     button {
@@ -109,15 +110,16 @@ label {
                 width: 100%;
                 padding: 0.5rem 0.75rem;
                 min-height: 2.4vw;
-                &:focus{
+
+                &:focus {
                     outline: unset;
                 }
             }
 
-            ::placeholder{
-                color:$write-overlay;
+            ::placeholder {
+                color: $write-overlay;
                 opacity: 0.6;
-                font-size: 0.8vw;
+                font-size: 0.90vw;
                 letter-spacing: 0.016rem;
             }
 
@@ -130,18 +132,19 @@ label {
             }
 
             textarea {
-                min-height: 8vw;
+                min-height: 10vw;
             }
         }
     }
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:800px) {
 
-    .project-carousel{
-        &__header{
-            ul{
-                li{
+    .project-carousel {
+        &__header {
+            ul {
+                li {
+
                     input[type="radio"]::before,
                     input[type="radio"] {
                         width: 2.6vw;
@@ -152,12 +155,47 @@ label {
                         outline: 2px solid $secondary;
                         outline-offset: 0rem;
                     }
-                    label{
+
+                    label {
                         font-size: 3vw;
                     }
                 }
             }
         }
     }
+
+    .contact {
+        &__body {
+            form {
+                .input-group{
+                    gap:0.75vw;
+                }
+                .group-duo{
+                    grid-template-columns: 1fr;
+                    gap:3.2vw;
+                }
+                label {
+                    display: none;
+                }
+
+                input,
+                textarea,
+                button { 
+                    font-size: 2.8vw;
+                }
+
+                ::placeholder {
+                    font-size: 2.8vw;
+                    opacity: 0.8;
+                }
+
+
+                textarea {
+                    min-height: 24vw;
+                }
+            }
+        }
+    }
+
 
 }

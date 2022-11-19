@@ -21,10 +21,12 @@
 
         &__header {
             padding: 0.75vw;
-            padding-left: 2vw;
             background-color: $secondary-dark;
             @include flex-center;
-            cursor: grab;
+            justify-content: space-between; 
+            svg {
+                cursor: pointer;
+            }
         }
 
         &__footer,
@@ -34,20 +36,21 @@
 
         &__footer {
             @include flex-center-center;
-            svg {
-                cursor: pointer;
-            }
+
         }
     }
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:800px) {
 
-    .modale{
-        &__frame{
+    .modale {
+        &__frame {
             width: 72vw;
             min-height: 60vw;
-            &__header,&__body,&__footer{
+
+            &__header,
+            &__body,
+            &__footer {
                 padding: 2vw;
             }
         }
