@@ -1,6 +1,7 @@
+textarea,
 input,
 label {
-    font-size: 0.76vw;
+    font-size: 0.86vw;
 }
 
 .project-carousel {
@@ -76,11 +77,9 @@ label {
         form {
             .input-group {
                 display: grid;
-                gap: 0.1vw;
-
                 &:nth-child(5) {
                     button {
-                        width: 36%;
+                        width: 28%;
                         margin: auto;
                     }
                 }
@@ -94,18 +93,17 @@ label {
 
             label {
                 color: $write-overlay;
-                min-height: 2vw;
                 @include flex-center;
-                font-size: 1vw;
+                display: none;
             }
 
             input,
             textarea,
             button {
-                background-color: $secondary-medium;
-                border: 1px solid $secondary;
+                background-color: $secondary-dark;
+                border: 1px solid $border-color;
                 font-family: $font-primary;
-                border-radius: 4px;
+                border-radius: 8px;
                 color: $primary;
                 width: 100%;
                 padding: 0.5rem 0.75rem;
@@ -119,20 +117,16 @@ label {
             ::placeholder {
                 color: $write-overlay;
                 opacity: 0.6;
-                font-size: 0.90vw;
+                font-size: 0.86vw;
                 letter-spacing: 0.016rem;
             }
 
-            label.star {
-                &::after {
-                    content: '*';
-                    color: $alternative;
-                    text-indent: 0.16rem;
-                }
+            label.star+ ::placeholder{
+                text-indent: 0.16rem;
             }
 
             textarea {
-                min-height: 10vw;
+                min-height: 8vw;
             }
         }
     }
@@ -167,20 +161,22 @@ label {
     .contact {
         &__body {
             form {
-                .input-group{
-                    gap:0.75vw;
+                .input-group {
+                    gap: 0.75vw;
                 }
-                .group-duo{
+
+                .group-duo {
                     grid-template-columns: 1fr;
-                    gap:3.2vw;
+                    gap: 3.2vw;
                 }
+
                 label {
                     display: none;
                 }
 
                 input,
                 textarea,
-                button { 
+                button {
                     font-size: 2.8vw;
                 }
 

@@ -74,26 +74,26 @@ const ContactForm = () => {
                 <div className="group-duo">
                     <div className="input-group">
                         <label>Prénom</label>
-                        <input type="text" name="firstname" required placeholder='Prénom' onChange={controleSaisie}/>
+                        <input type="text" name="firstname" required placeholder='Prénom*' onChange={controleSaisie}/>
                     </div>
                     <div className="input-group">
                         <label>Nom</label>
-                        <input type="text" name="lastname" required placeholder='Nom' onChange={controleSaisie}/>
+                        <input type="text" name="lastname" required placeholder='Nom*' onChange={controleSaisie}/>
                     </div>
                 </div>
                 <div className="input-group">
                     <label>Email</label>
-                    <input type="email" name="email" required placeholder='Email' onChange={controleSaisie}/>
+                    <input type="email" name="email" required placeholder='Email*' onChange={controleSaisie}/>
                 </div>
                 <div className="input-group">
                     <label>Message</label>
-                    <textarea name="message" required placeholder='Décrivez en quelques-mots votre projet'></textarea>
+                    <textarea name="message" required placeholder='Décrivez en quelques-mots votre projet*'></textarea>
                 </div>
                 <div className="input-group">
                     {state.errors && 
                         <p>{state.errors}</p>
                     }
-                    <button type="submit">Send</button>
+                    <button type="submit">Envoyer</button>
                 </div>
             </form>
             

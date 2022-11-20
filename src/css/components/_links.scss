@@ -12,11 +12,11 @@ a {
             height: 4.4vw;
             text-transform: capitalize;
             color: $primary;
-            // border-radius: 4px;
         }
 
         a.is-active {
-            background: linear-gradient(180deg, $secondary-medium, $secondary-medium);
+            background: #f0f0f008;
+            color: $alternative;
         }
     }
 }
@@ -102,26 +102,34 @@ a {
 
     .navigation {
         ul {
-            .is-active{
-                li{
-                    &::before{
-                        content:'->';
-                        position:absolute;
-                        margin-left:-5%;
+            .is-active {
+                li {
+                    &::before {
+                        content: '->';
+                        position: absolute;
+                        margin-left: -5%;
                         width: 20px;
                         height: 20px;
-                        color:gold;
+                        color: $alternative;
                         font-family: $font-primary-light;
+                        
                     }
+                    color: $write-overlay;
+                    opacity: 1;
                 }
             }
+
             li {
-                font-size: 4vw;
                 text-transform: uppercase;
                 color: $write-overlay;
                 font-family: $font-alternative;
+                opacity: 0.72;
                 width: 40vw;
                 text-align: start;
+                font-size: 4.8vw;
+                text-indent: -2vw;
+                
+                width: 40vw;
             }
         }
     }

@@ -5,11 +5,11 @@
     place-content: baseline;
     background-color: $secondary-dark;
     &__body{
-        padding:2vw;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
-        gap: 2vw;
+        padding:4vw;
+        gap: 4vw;
     }
     &__footer{
         height: 2px;

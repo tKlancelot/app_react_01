@@ -7,7 +7,7 @@ h1,h2{
     letter-spacing: 0.016rem;
     text-transform: capitalize;
     color: $secondary;
-    text-shadow:-1px -1px 1px $secondary-lightest,0px -1px 1px $secondary-lightest
+    text-shadow:-1px -1px 1px $secondary-lightest,0px -1px 1px $secondary-lightest;
     // 0px 0px 1px $alternative;
 }
 
@@ -30,10 +30,12 @@ h3,h4,h6{
 
 h2{
     letter-spacing: 0.092rem;
-    font-size: 2.4vw;
+    font-size: 1.92vw;
     text-align: start;
     text-transform: uppercase;
+    text-shadow:0px -1px 0px $secondary-light,0px -1px 0px $secondary-light;
 }
+
 
 .project-card{
     &__body,.details__panel{
@@ -46,15 +48,6 @@ h2{
     }
 }
 
-.expertise-card{
-    &__body{
-        h2{
-            text-transform: uppercase;
-            color:$secondary-light;
-            font-size: 1.8vw;
-        }
-    }
-}
 
 .modale{
     &__frame{
@@ -74,6 +67,8 @@ h2{
 
     h2{
         font-size: 6.4vw;
+        text-shadow: unset;
+        color:$secondary-light;
     }
 
     .home-banner{
@@ -105,7 +100,7 @@ h2{
     .expertise-card{
         &__body{
             h2{
-                font-size: 3.6vw;
+                font-size: 4vw;
             }
         }
     }

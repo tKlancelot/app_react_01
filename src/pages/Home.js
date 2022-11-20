@@ -61,7 +61,7 @@ const Home = () => {
         <div className="home-banner">
           <div className="home-banner__header">
             <div className="home-banner__header__background">
-              <img src="./images/milky-way.jpg" alt="milky way" />
+              {/* <img src="./images/milky-way.jpg" alt="milky way" /> */}
             </div>
           </div>
           <div className="home-banner__body">

@@ -11,17 +11,19 @@ const Contact = () => {
         <Navigation />
         <main>
             <div className="contact">
-                <div className="contact__header">
-                </div>
                 <div className="contact__body">
+                    {/* <div className="contact__body__header">
+                        <h2>Contactons-nous !</h2>
+                    </div> */}
                     <div className="contact__body__frame">
-                        <div className="infos-frame">
-                            <ContactForm/>
-                        </div>
+
                         <div className="picture-frame">
                             <SceneEmail3d/>
                         </div>
-
+                        
+                        <div className="infos-frame">
+                            <ContactForm/>
+                        </div>
                         {/* <div className="infos-frame">
                             <div className="infos-frame__item">
                                 <a href="tel:+33763740559">

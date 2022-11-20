@@ -1,9 +1,8 @@
 .navigation {
-    &__body {
-        // @include section-border;
-        border-bottom: 1px solid $border-color;
-        @include section-linear;
+    &__body {       
         @include flex-center;
+        border-bottom: 1px solid $border-color;
+        background: $secondary-darkest;
         justify-content: space-between;
 
         .logotype {
@@ -20,7 +19,7 @@
 
         ul {
             display: flex;
-            margin: auto 4vw;
+            margin: auto 6vw;
         }
 
         &__right {
@@ -40,7 +39,6 @@
         &__body {
             flex-direction: column;
             background: $secondary-medium;
-
             .logotype {
                 height: 12vw;
 

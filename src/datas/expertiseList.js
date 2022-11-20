@@ -10,7 +10,7 @@ export const expertiseList = [
 		title: 'MODÉLISATION 3D',
 		paragraphOne:'Rien de plus gratifiant que de voir un objet 3d prendre vie sous ses yeux au fil de différentes étapes de construction sur Blender. Ce gratuiciel légendaire permet de créer des objets, des scènes et des animations 3d.',
 		paragraphTwo:'À l\'issu du processus, on obtient des objets 3d légers, avec peu de facettes, texturés et animés, nos lumières, nos caméras et tout cela constitue une scène 3d. On l\'exportera au format gltf afin de pouvoir l\'intégrer dans un navigateur grâce à la librairie javaScript Three.js.',
-		colorTag:'lime',
+		colorTag:'#CDFC8E',
 		id: '2a9'
 	},
 	{

@@ -1,7 +1,7 @@
 export const projectList = [
 	{
 		name: 'carmona restaurant',
-		description:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad id magni doloremque quas, unde repudiandae similique ducimus placeat sed amet natus aspernatur repellendus provident blanditiis alias maxime expedita quasi deserunt.',
+		description:'Site vitrine du restaurant Carmona fraîchement ouvert',
 		category: ['création theme wp', 'dvt theme wp'],
 		environment:'wordpress',
 		development:['vscode','locale','github'],
@@ -14,7 +14,7 @@ export const projectList = [
 	},
 	{
 		name: 'day and night',
-		description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quidem dolores est optio amet eos quis excepturi fugit, dicta sit, voluptatem inventore maxime iure totam expedita ullam nemo cumque cupiditate.',
+		description:'Site web du groupe DayNightParis, Créateur de lieux & concepts festifs, Producteur d’expériences grand public & events privés',
 		category: ['low-code', 'refactoring'],
 		environment:'wordpress',
 		development:['preprod','github'],
@@ -27,7 +27,7 @@ export const projectList = [
 	},
 	{
 		name: 'portfolio classic theme',
-		description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus suscipit voluptatem fuga ut mollitia. A laborum illum expedita. Id minus nemo animi fugit perspiciatis hic modi corrupti? Adipisci, tenetur voluptate.',
+		description:'Mon portfolio wordpress (en refonte)',
 		category: ['création thème wp', 'refactoring','bdd wp'],
 		environment:'wordpress',
 		development:['vscode','preprod','github'],
@@ -40,7 +40,7 @@ export const projectList = [
 	},
 	{
 		name: 'medijob',
-		description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid doloribus nam iure alias eveniet iusto libero fugiat soluta quibusdam at delectus ut distinctio aut asperiores, tenetur dolor nisi optio beatae.',
+		description:'Site web de Medijob, plateforme de mise en relation pour les professionnels de la pharmacie',
 		category: ['intégration twig', 'refactoring','dvt front-end'],
 		environment:'symfony 5.4.10',
 		development:['vscode','preprod','github','webpack'],
@@ -53,7 +53,7 @@ export const projectList = [
 	},
 	{
 		name: 'dostgrill',
-		description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid doloribus nam iure alias eveniet iusto libero fugiat soluta quibusdam at delectus ut distinctio aut asperiores, tenetur dolor nisi optio beatae.',
+		description:'Site vitrine du restaurant dostgrill',
 		category: ['création thème wp', 'refactoring'],
 		environment:'wordpress',
 		development:['vscode','preprod'],
@@ -66,7 +66,7 @@ export const projectList = [
 	},
 	{
 		name: 'scavolini landing page',
-		description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid doloribus nam iure alias eveniet iusto libero fugiat soluta quibusdam at delectus ut distinctio aut asperiores, tenetur dolor nisi optio beatae.',
+		description:'Landing page promotionnelle pour le groupe SCAVOLINI',
 		category: ['low-code', 'refactoring'],
 		environment:'wordpress',
 		development:['vscode','preprod'],
